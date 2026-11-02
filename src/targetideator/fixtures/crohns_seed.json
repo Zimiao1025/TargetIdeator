@@ -1,0 +1,2730 @@
+{
+  "schema_version": "1.2.0",
+  "snapshot_id": "ti:snapshot:crohns-p02-frozen-20261101",
+  "disease_brief": {
+    "id": "ti:brief:crohns-p0",
+    "as_of_date": "2026-10-31",
+    "disease": {
+      "namespace": "EFO",
+      "identifier": "EFO:0000384",
+      "label": "Crohn's disease",
+      "entity_type": "disease"
+    },
+    "population": "Adults with moderate-to-severe active Crohn's disease; illustrative scope only",
+    "disease_stage": "Active disease with inadequate response to at least one advanced therapy",
+    "target_tissues": [
+      "intestinal mucosa",
+      "mesenteric lymphoid tissue"
+    ],
+    "key_cell_states": [
+      "inflammatory myeloid state",
+      "activated T-cell state",
+      "stressed intestinal epithelium"
+    ],
+    "desired_outcomes": [
+      "sustained endoscopic response",
+      "steroid-free remission",
+      "mucosal healing"
+    ],
+    "allowed_modalities": [
+      "small_molecule",
+      "antibody",
+      "oligo",
+      "cell_gene_therapy"
+    ],
+    "constraints": [
+      "Avoid systemic immune suppression when a tissue-restricted intervention is feasible",
+      "Every ranked hypothesis must expose counterevidence and a fatal assumption",
+      "Fixture is not suitable for research or clinical decisions"
+    ],
+    "curation_status": "illustrative_pending_expert_review",
+    "treatment_context": {
+      "severity": "Moderate-to-severe active disease",
+      "prior_therapy_requirements": [
+        "Inadequate response to at least one advanced therapy"
+      ],
+      "concomitant_therapy": "Stable background therapy if permitted by the eventual protocol",
+      "infection_constraints": [
+        "Active serious or opportunistic infection must be excluded for immune-modulating interventions"
+      ],
+      "comorbidity_constraints": [
+        "Cardiovascular, thrombotic, malignant, and hepatic risk require intervention-specific assessment"
+      ],
+      "unknowns": [
+        {
+          "field": "treatment_sequence",
+          "reason": "The P0 fixture does not define biologic-naive versus multi-refractory strata.",
+          "resolution_action": "Expert must select the intended line of therapy before evidence scoring.",
+          "blocking_for_current_gate": false,
+          "resolution_stage": "target_validation"
+        }
+      ]
+    },
+    "anatomical_contexts": [
+      {
+        "id": "ti:anatomy:ileal-mucosa",
+        "organ": "intestine",
+        "region": "terminal ileum",
+        "compartment": "mucosa including epithelial, lamina propria, and immune compartments",
+        "sampling_method": "endoscopic biopsy",
+        "accessibility": "Accessible during clinically indicated or protocol-specified ileocolonoscopy",
+        "decision_window": "Baseline sampling must be available before treatment assignment",
+        "unknowns": [
+          {
+            "field": "repeat_sampling",
+            "reason": "Acceptable repeat-biopsy burden is unreviewed.",
+            "resolution_action": "Define feasible PD biopsy schedule with clinicians and patients.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "target_validation"
+          }
+        ]
+      },
+      {
+        "id": "ti:anatomy:colonic-mucosa",
+        "organ": "large intestine",
+        "region": "affected colon segment",
+        "compartment": "mucosa including epithelial, stromal, and immune compartments",
+        "sampling_method": "endoscopic biopsy",
+        "accessibility": "Accessible during colonoscopy; affected and non-affected paired sampling is preferred",
+        "decision_window": "Baseline sampling must be available before treatment assignment",
+        "unknowns": [
+          {
+            "field": "segment_selection",
+            "reason": "The preferred colonic segment is not defined.",
+            "resolution_action": "Lock segment-selection and paired-sampling rules in the assay protocol.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "target_validation"
+          }
+        ]
+      },
+      {
+        "id": "ti:anatomy:peripheral-blood",
+        "organ": "blood",
+        "region": "peripheral circulation",
+        "compartment": "plasma and peripheral blood mononuclear cells",
+        "sampling_method": "venipuncture",
+        "accessibility": "Repeatedly accessible",
+        "decision_window": "Baseline and on-treatment PD timepoints",
+        "unknowns": []
+      }
+    ]
+  },
+  "evidence_records": [
+    {
+      "id": "ti:evidence:il23a-support-fixture",
+      "source_type": "manual_fixture",
+      "source_record_id": "fixture:il23a:support",
+      "title": "Illustrative support record for IL23A",
+      "passage": "P0 fixture: an IL-23-centered inflammatory program is represented as a potentially modifiable disease mechanism. This is a synthetic summary, not a literature quotation.",
+      "polarity": "supports",
+      "available_on": "2026-10-01",
+      "curation_status": "illustrative_pending_expert_review",
+      "notes": [
+        "Replace with claim-level primary-source evidence during P1"
+      ],
+      "evidence_level": "illustrative",
+      "locator": "Synthetic P0/P0.1 fixture; no source passage",
+      "study_design": "Synthetic design prompt for schema and interface review",
+      "population_or_model": "No empirical cohort or model; pending P1 evidence ingestion",
+      "limitations": [
+        "Not empirical evidence",
+        "No effect estimate",
+        "Must be replaced by traceable primary sources before scientific scoring"
+      ]
+    },
+    {
+      "id": "ti:evidence:il23a-limit-fixture",
+      "source_type": "manual_fixture",
+      "source_record_id": "fixture:il23a:limit",
+      "title": "Illustrative limitation record for IL23A",
+      "passage": "P0 fixture: Crohn's disease heterogeneity may leave an IL-23-low subgroup with limited response. This is a synthetic uncertainty statement.",
+      "polarity": "qualifies",
+      "available_on": "2026-10-01",
+      "curation_status": "illustrative_pending_expert_review",
+      "notes": [
+        "Requires subgroup and resistance-mechanism review"
+      ],
+      "evidence_level": "illustrative",
+      "locator": "Synthetic P0/P0.1 fixture; no source passage",
+      "study_design": "Synthetic design prompt for schema and interface review",
+      "population_or_model": "No empirical cohort or model; pending P1 evidence ingestion",
+      "limitations": [
+        "Not empirical evidence",
+        "No effect estimate",
+        "Must be replaced by traceable primary sources before scientific scoring"
+      ]
+    },
+    {
+      "id": "ti:evidence:jak1-support-fixture",
+      "source_type": "manual_fixture",
+      "source_record_id": "fixture:jak1:support",
+      "title": "Illustrative support record for JAK1",
+      "passage": "P0 fixture: JAK1 is represented as a convergence point for multiple inflammatory signals and therefore a candidate for calibrated inhibition.",
+      "polarity": "supports",
+      "available_on": "2026-10-01",
+      "curation_status": "illustrative_pending_expert_review",
+      "notes": [
+        "Mechanistic breadth is a hypothesis, not a validated score"
+      ],
+      "evidence_level": "illustrative",
+      "locator": "Synthetic P0/P0.1 fixture; no source passage",
+      "study_design": "Synthetic design prompt for schema and interface review",
+      "population_or_model": "No empirical cohort or model; pending P1 evidence ingestion",
+      "limitations": [
+        "Not empirical evidence",
+        "No effect estimate",
+        "Must be replaced by traceable primary sources before scientific scoring"
+      ]
+    },
+    {
+      "id": "ti:evidence:jak1-limit-fixture",
+      "source_type": "manual_fixture",
+      "source_record_id": "fixture:jak1:limit",
+      "title": "Illustrative limitation record for JAK1",
+      "passage": "P0 fixture: broad pathway engagement is represented as a possible safety and therapeutic-window limitation.",
+      "polarity": "qualifies",
+      "available_on": "2026-10-01",
+      "curation_status": "illustrative_pending_expert_review",
+      "notes": [
+        "Requires modality-, dose-, and tissue-specific assessment"
+      ],
+      "evidence_level": "illustrative",
+      "locator": "Synthetic P0/P0.1 fixture; no source passage",
+      "study_design": "Synthetic design prompt for schema and interface review",
+      "population_or_model": "No empirical cohort or model; pending P1 evidence ingestion",
+      "limitations": [
+        "Not empirical evidence",
+        "No effect estimate",
+        "Must be replaced by traceable primary sources before scientific scoring"
+      ]
+    },
+    {
+      "id": "ti:evidence:tnfsf15-support-fixture",
+      "source_type": "manual_fixture",
+      "source_record_id": "fixture:tnfsf15:support",
+      "title": "Illustrative support record for TNFSF15",
+      "passage": "P0 fixture: a TNFSF15-associated immune-stromal program is represented as a candidate mechanism in a biomarker-defined subgroup.",
+      "polarity": "supports",
+      "available_on": "2026-10-01",
+      "curation_status": "illustrative_pending_expert_review",
+      "notes": [
+        "Population definition and causal direction remain unreviewed"
+      ],
+      "evidence_level": "illustrative",
+      "locator": "Synthetic P0/P0.1 fixture; no source passage",
+      "study_design": "Synthetic design prompt for schema and interface review",
+      "population_or_model": "No empirical cohort or model; pending P1 evidence ingestion",
+      "limitations": [
+        "Not empirical evidence",
+        "No effect estimate",
+        "Must be replaced by traceable primary sources before scientific scoring"
+      ]
+    },
+    {
+      "id": "ti:evidence:tnfsf15-limit-fixture",
+      "source_type": "manual_fixture",
+      "source_record_id": "fixture:tnfsf15:limit",
+      "title": "Illustrative limitation record for TNFSF15",
+      "passage": "P0 fixture: the predictive value and deployability of a TNFSF15-related biomarker are represented as unresolved.",
+      "polarity": "qualifies",
+      "available_on": "2026-10-01",
+      "curation_status": "illustrative_pending_expert_review",
+      "notes": [
+        "Do not infer clinical enrichment without validation"
+      ],
+      "evidence_level": "illustrative",
+      "locator": "Synthetic P0/P0.1 fixture; no source passage",
+      "study_design": "Synthetic design prompt for schema and interface review",
+      "population_or_model": "No empirical cohort or model; pending P1 evidence ingestion",
+      "limitations": [
+        "Not empirical evidence",
+        "No effect estimate",
+        "Must be replaced by traceable primary sources before scientific scoring"
+      ]
+    },
+    {
+      "id": "ti:evidence:nod2-support-fixture",
+      "source_type": "manual_fixture",
+      "source_record_id": "fixture:nod2:support",
+      "title": "Illustrative support record for NOD2",
+      "passage": "P0 fixture: impaired NOD2-related epithelial or innate homeostasis is represented as a possible disease mechanism in a selected subgroup.",
+      "polarity": "supports",
+      "available_on": "2026-10-01",
+      "curation_status": "illustrative_pending_expert_review",
+      "notes": [
+        "Loss-of-function rescue is a speculative product concept"
+      ],
+      "evidence_level": "illustrative",
+      "locator": "Synthetic P0/P0.1 fixture; no source passage",
+      "study_design": "Synthetic design prompt for schema and interface review",
+      "population_or_model": "No empirical cohort or model; pending P1 evidence ingestion",
+      "limitations": [
+        "Not empirical evidence",
+        "No effect estimate",
+        "Must be replaced by traceable primary sources before scientific scoring"
+      ]
+    },
+    {
+      "id": "ti:evidence:nod2-limit-fixture",
+      "source_type": "manual_fixture",
+      "source_record_id": "fixture:nod2:limit",
+      "title": "Illustrative limitation record for NOD2",
+      "passage": "P0 fixture: causal direction, genotype coverage, delivery, and risk of excess innate activation are represented as major unresolved constraints.",
+      "polarity": "refutes",
+      "available_on": "2026-10-01",
+      "curation_status": "illustrative_pending_expert_review",
+      "notes": [
+        "System should abstain until these constraints are resolved"
+      ],
+      "evidence_level": "illustrative",
+      "locator": "Synthetic P0/P0.1 fixture; no source passage",
+      "study_design": "Synthetic design prompt for schema and interface review",
+      "population_or_model": "No empirical cohort or model; pending P1 evidence ingestion",
+      "limitations": [
+        "Not empirical evidence",
+        "No effect estimate",
+        "Must be replaced by traceable primary sources before scientific scoring"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "ti:claim:il23a-mechanism",
+      "subject": {
+        "namespace": "HGNC",
+        "identifier": "HGNC:15488",
+        "label": "IL23A",
+        "entity_type": "gene"
+      },
+      "predicate": "illustratively sustains",
+      "object": {
+        "text": "an inflammatory T-cell program in a subset of Crohn's disease"
+      },
+      "context": {
+        "species": "human",
+        "anatomical_region": "terminal ileum or affected colon; not yet stratified",
+        "compartment": "intestinal mucosa; exact compartment unresolved",
+        "source_cells": [
+          "intestinal antigen-presenting and myeloid cells; exact source subset unresolved"
+        ],
+        "responding_cells": [
+          "IL-23R-positive T cells",
+          "group 3 innate lymphoid cells"
+        ],
+        "effector_cells": [
+          "inflammatory T-cell and ILC3 states"
+        ],
+        "population": "illustrative adult subgroup",
+        "disease_stage": "active disease",
+        "treatment_context": "At least one advanced-therapy failure; exact treatment stratum unresolved",
+        "model_system": "unreviewed composite fixture",
+        "mechanistic_role": "contributing",
+        "bypass_or_compensation": [
+          "parallel inflammatory cytokine programs",
+          "IL-23-independent effector maintenance"
+        ],
+        "unknowns": [
+          {
+            "field": "cellular_causality",
+            "reason": "The fixture does not establish the causal source-to-effector chain.",
+            "resolution_action": "Curate perturbational evidence by cell type and anatomical compartment in P1.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "target_validation"
+          }
+        ]
+      },
+      "direction": "inhibit",
+      "polarity": "supports",
+      "evidence_ids": [
+        "ti:evidence:il23a-support-fixture"
+      ],
+      "uncertainty": "Primary sources, effect size, and subgroup boundaries have not been curated.",
+      "curation_status": "illustrative_pending_expert_review",
+      "effect_size_missing_reason": "Synthetic fixture has no empirical effect estimate; primary-source extraction is required in P1."
+    },
+    {
+      "id": "ti:claim:il23a-heterogeneity",
+      "subject": {
+        "namespace": "HGNC",
+        "identifier": "HGNC:15488",
+        "label": "IL23A",
+        "entity_type": "gene"
+      },
+      "predicate": "may not dominate",
+      "object": {
+        "text": "inflammation in every molecular subgroup"
+      },
+      "context": {
+        "species": "human",
+        "anatomical_region": "terminal ileum or affected colon; not yet stratified",
+        "compartment": "intestinal mucosa; exact compartment unresolved",
+        "source_cells": [
+          "intestinal antigen-presenting and myeloid cells; exact source subset unresolved"
+        ],
+        "responding_cells": [
+          "IL-23R-positive T cells",
+          "group 3 innate lymphoid cells"
+        ],
+        "effector_cells": [
+          "inflammatory T-cell and ILC3 states"
+        ],
+        "population": "illustrative adult subgroup",
+        "disease_stage": "active disease",
+        "treatment_context": "At least one advanced-therapy failure; exact treatment stratum unresolved",
+        "model_system": "unreviewed composite fixture",
+        "mechanistic_role": "contributing",
+        "bypass_or_compensation": [
+          "parallel inflammatory cytokine programs",
+          "IL-23-independent effector maintenance"
+        ],
+        "unknowns": [
+          {
+            "field": "cellular_causality",
+            "reason": "The fixture does not establish the causal source-to-effector chain.",
+            "resolution_action": "Curate perturbational evidence by cell type and anatomical compartment in P1.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "target_validation"
+          }
+        ]
+      },
+      "direction": "inhibit",
+      "polarity": "qualifies",
+      "evidence_ids": [
+        "ti:evidence:il23a-limit-fixture"
+      ],
+      "uncertainty": "No prevalence or predictive effect is asserted.",
+      "curation_status": "illustrative_pending_expert_review",
+      "effect_size_missing_reason": "Synthetic fixture has no empirical effect estimate; primary-source extraction is required in P1."
+    },
+    {
+      "id": "ti:claim:jak1-mechanism",
+      "subject": {
+        "namespace": "HGNC",
+        "identifier": "HGNC:6190",
+        "label": "JAK1",
+        "entity_type": "gene"
+      },
+      "predicate": "illustratively integrates",
+      "object": {
+        "text": "multiple inflammatory signals relevant to active intestinal disease"
+      },
+      "context": {
+        "species": "human",
+        "anatomical_region": "terminal ileum or affected colon; not yet stratified",
+        "compartment": "intestinal mucosa; exact compartment unresolved",
+        "source_cells": [
+          "multiple cytokine-producing immune and stromal populations"
+        ],
+        "responding_cells": [
+          "JAK1-dependent intestinal immune and epithelial populations"
+        ],
+        "effector_cells": [
+          "multi-cytokine inflammatory immune states"
+        ],
+        "population": "illustrative adults",
+        "disease_stage": "active disease",
+        "treatment_context": "At least one advanced-therapy failure; exact treatment stratum unresolved",
+        "model_system": "unreviewed composite fixture",
+        "mechanistic_role": "contributing",
+        "bypass_or_compensation": [
+          "JAK1-independent cytokine signaling",
+          "redundant inflammatory pathways"
+        ],
+        "unknowns": [
+          {
+            "field": "cellular_causality",
+            "reason": "The fixture does not establish the causal source-to-effector chain.",
+            "resolution_action": "Curate perturbational evidence by cell type and anatomical compartment in P1.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "target_validation"
+          }
+        ]
+      },
+      "direction": "inhibit",
+      "polarity": "supports",
+      "evidence_ids": [
+        "ti:evidence:jak1-support-fixture"
+      ],
+      "uncertainty": "Pathway selectivity and clinically useful degree of inhibition are unknown.",
+      "curation_status": "illustrative_pending_expert_review",
+      "effect_size_missing_reason": "Synthetic fixture has no empirical effect estimate; primary-source extraction is required in P1."
+    },
+    {
+      "id": "ti:claim:jak1-safety",
+      "subject": {
+        "namespace": "HGNC",
+        "identifier": "HGNC:6190",
+        "label": "JAK1",
+        "entity_type": "gene"
+      },
+      "predicate": "illustratively creates",
+      "object": {
+        "text": "a dose- and distribution-dependent safety constraint"
+      },
+      "context": {
+        "species": "human",
+        "anatomical_region": "systemic circulation",
+        "compartment": "systemic",
+        "source_cells": [
+          "multiple cytokine-producing immune and stromal populations"
+        ],
+        "responding_cells": [
+          "JAK1-dependent intestinal immune and epithelial populations"
+        ],
+        "effector_cells": [
+          "multi-cytokine inflammatory immune states"
+        ],
+        "population": "illustrative adults",
+        "disease_stage": "active disease",
+        "treatment_context": "At least one advanced-therapy failure; exact treatment stratum unresolved",
+        "model_system": "unreviewed composite fixture",
+        "mechanistic_role": "contributing",
+        "bypass_or_compensation": [
+          "JAK1-independent cytokine signaling",
+          "redundant inflammatory pathways"
+        ],
+        "unknowns": [
+          {
+            "field": "cellular_causality",
+            "reason": "The fixture does not establish the causal source-to-effector chain.",
+            "resolution_action": "Curate perturbational evidence by cell type and anatomical compartment in P1.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "target_validation"
+          }
+        ]
+      },
+      "direction": "inhibit",
+      "polarity": "qualifies",
+      "evidence_ids": [
+        "ti:evidence:jak1-limit-fixture"
+      ],
+      "uncertainty": "No safety event rate or modality comparison is asserted.",
+      "curation_status": "illustrative_pending_expert_review",
+      "effect_size_missing_reason": "Synthetic fixture has no empirical effect estimate; primary-source extraction is required in P1."
+    },
+    {
+      "id": "ti:claim:tnfsf15-mechanism",
+      "subject": {
+        "namespace": "HGNC",
+        "identifier": "HGNC:11931",
+        "label": "TNFSF15",
+        "entity_type": "gene"
+      },
+      "predicate": "illustratively marks and drives",
+      "object": {
+        "text": "an immune-stromal inflammatory state in a selected subgroup"
+      },
+      "context": {
+        "species": "human",
+        "anatomical_region": "terminal ileum or affected colon; not yet stratified",
+        "compartment": "intestinal mucosa; exact compartment unresolved",
+        "source_cells": [
+          "intestinal mononuclear phagocytes and other TL1A-producing cells"
+        ],
+        "responding_cells": [
+          "DR3-positive lymphoid populations",
+          "responsive stromal-immune states"
+        ],
+        "effector_cells": [
+          "T-cell, innate lymphoid, and immune-stromal inflammatory states"
+        ],
+        "population": "hypothetical biomarker-high adults",
+        "disease_stage": "active disease",
+        "treatment_context": "At least one advanced-therapy failure; exact treatment stratum unresolved",
+        "model_system": "unreviewed composite fixture",
+        "mechanistic_role": "contributing",
+        "bypass_or_compensation": [
+          "DR3-independent inflammatory programs",
+          "ligand and receptor form heterogeneity"
+        ],
+        "unknowns": [
+          {
+            "field": "cellular_causality",
+            "reason": "The fixture does not establish the causal source-to-effector chain.",
+            "resolution_action": "Curate perturbational evidence by cell type and anatomical compartment in P1.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "target_validation"
+          }
+        ]
+      },
+      "direction": "inhibit",
+      "polarity": "supports",
+      "evidence_ids": [
+        "ti:evidence:tnfsf15-support-fixture"
+      ],
+      "uncertainty": "Causal direction and subgroup definition require expert review.",
+      "curation_status": "illustrative_pending_expert_review",
+      "effect_size_missing_reason": "Synthetic fixture has no empirical effect estimate; primary-source extraction is required in P1."
+    },
+    {
+      "id": "ti:claim:tnfsf15-biomarker",
+      "subject": {
+        "namespace": "HGNC",
+        "identifier": "HGNC:11931",
+        "label": "TNFSF15",
+        "entity_type": "gene"
+      },
+      "predicate": "has unresolved",
+      "object": {
+        "text": "predictive biomarker performance and assay deployability"
+      },
+      "context": {
+        "species": "human",
+        "anatomical_region": "terminal ileum or affected colon; not yet stratified",
+        "compartment": "intestinal mucosa; exact compartment unresolved",
+        "source_cells": [
+          "intestinal mononuclear phagocytes and other TL1A-producing cells"
+        ],
+        "responding_cells": [
+          "DR3-positive lymphoid populations",
+          "responsive stromal-immune states"
+        ],
+        "effector_cells": [
+          "T-cell, innate lymphoid, and immune-stromal inflammatory states"
+        ],
+        "population": "hypothetical biomarker-high adults",
+        "disease_stage": "active disease",
+        "treatment_context": "At least one advanced-therapy failure; exact treatment stratum unresolved",
+        "model_system": "unreviewed composite fixture",
+        "mechanistic_role": "contributing",
+        "bypass_or_compensation": [
+          "DR3-independent inflammatory programs",
+          "ligand and receptor form heterogeneity"
+        ],
+        "unknowns": [
+          {
+            "field": "cellular_causality",
+            "reason": "The fixture does not establish the causal source-to-effector chain.",
+            "resolution_action": "Curate perturbational evidence by cell type and anatomical compartment in P1.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "target_validation"
+          }
+        ]
+      },
+      "direction": "inhibit",
+      "polarity": "qualifies",
+      "evidence_ids": [
+        "ti:evidence:tnfsf15-limit-fixture"
+      ],
+      "uncertainty": "Sensitivity, specificity, and prospective utility are unknown.",
+      "curation_status": "illustrative_pending_expert_review",
+      "effect_size_missing_reason": "Synthetic fixture has no empirical effect estimate; primary-source extraction is required in P1."
+    },
+    {
+      "id": "ti:claim:nod2-tractability",
+      "subject": {
+        "namespace": "HGNC",
+        "identifier": "HGNC:5331",
+        "label": "NOD2",
+        "entity_type": "gene"
+      },
+      "predicate": "has unresolved",
+      "object": {
+        "text": "direction, delivery, therapeutic window, and excess-activation risk"
+      },
+      "context": {
+        "species": "human",
+        "anatomical_region": "terminal ileum or affected colon; not yet stratified",
+        "compartment": "intestinal mucosa; exact compartment unresolved",
+        "source_cells": [
+          "not applicable; intracellular sensing occurs in target cells"
+        ],
+        "responding_cells": [
+          "intestinal epithelial cells",
+          "myeloid cells"
+        ],
+        "effector_cells": [
+          "epithelial repair and innate immune states"
+        ],
+        "population": "hypothetical loss-of-function subgroup",
+        "disease_stage": "active or relapsing disease",
+        "treatment_context": "At least one advanced-therapy failure; exact treatment stratum unresolved",
+        "model_system": "unreviewed composite fixture",
+        "mechanistic_role": "unknown",
+        "bypass_or_compensation": [
+          "cell-type-specific and context-dependent NOD2 effects",
+          "microbial and innate sensing redundancy"
+        ],
+        "unknowns": [
+          {
+            "field": "cellular_causality",
+            "reason": "The fixture does not establish the causal source-to-effector chain.",
+            "resolution_action": "Curate perturbational evidence by cell type and anatomical compartment in P1.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "target_validation"
+          }
+        ]
+      },
+      "direction": "replace",
+      "polarity": "refutes",
+      "evidence_ids": [
+        "ti:evidence:nod2-limit-fixture"
+      ],
+      "uncertainty": "This fixture intentionally represents an abstention case.",
+      "curation_status": "illustrative_pending_expert_review",
+      "effect_size_missing_reason": "Synthetic fixture has no empirical effect estimate; primary-source extraction is required in P1."
+    },
+    {
+      "id": "ti:claim:nod2-epithelial-mechanism",
+      "subject": {
+        "namespace": "HGNC",
+        "identifier": "HGNC:5331",
+        "label": "NOD2",
+        "entity_type": "gene"
+      },
+      "predicate": "illustratively contributes to",
+      "object": {
+        "text": "epithelial repair and homeostatic failure in a genotype- and function-defined subgroup"
+      },
+      "context": {
+        "species": "human",
+        "anatomical_region": "terminal ileum or affected colon; not yet stratified",
+        "compartment": "intestinal mucosa; exact compartment unresolved",
+        "source_cells": [
+          "not applicable; intracellular sensing occurs in target cells"
+        ],
+        "responding_cells": [
+          "intestinal epithelial cells"
+        ],
+        "effector_cells": [
+          "epithelial repair and barrier states"
+        ],
+        "population": "hypothetical loss-of-function subgroup",
+        "disease_stage": "active or relapsing disease",
+        "treatment_context": "At least one advanced-therapy failure; exact treatment stratum unresolved",
+        "model_system": "unreviewed composite fixture",
+        "mechanistic_role": "unknown",
+        "bypass_or_compensation": [
+          "cell-type-specific and context-dependent NOD2 effects",
+          "microbial and innate sensing redundancy"
+        ],
+        "unknowns": [
+          {
+            "field": "cellular_causality",
+            "reason": "The fixture does not establish the causal source-to-effector chain.",
+            "resolution_action": "Curate perturbational evidence by cell type and anatomical compartment in P1.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "target_validation"
+          }
+        ]
+      },
+      "direction": "replace",
+      "polarity": "supports",
+      "evidence_ids": [
+        "ti:evidence:nod2-support-fixture"
+      ],
+      "uncertainty": "Mechanistic rescue and subgroup coverage are unvalidated.",
+      "curation_status": "illustrative_pending_expert_review",
+      "effect_size_missing_reason": "Synthetic fixture has no empirical effect estimate; primary-source extraction is required in P1."
+    },
+    {
+      "id": "ti:claim:nod2-myeloid-context",
+      "subject": {
+        "namespace": "HGNC",
+        "identifier": "HGNC:5331",
+        "label": "NOD2",
+        "entity_type": "gene"
+      },
+      "predicate": "has context-dependent effects on",
+      "object": {
+        "text": "myeloid inflammatory and resolution programs"
+      },
+      "context": {
+        "species": "human",
+        "anatomical_region": "terminal ileum or affected colon; not yet stratified",
+        "compartment": "intestinal mucosa; exact compartment unresolved",
+        "source_cells": [
+          "not applicable; intracellular sensing occurs in target cells"
+        ],
+        "responding_cells": [
+          "intestinal myeloid cells"
+        ],
+        "effector_cells": [
+          "inflammatory, microbial-response, and tissue-repair states"
+        ],
+        "population": "hypothetical loss-of-function subgroup",
+        "disease_stage": "active or relapsing disease",
+        "treatment_context": "At least one advanced-therapy failure; exact treatment stratum unresolved",
+        "model_system": "unreviewed composite fixture",
+        "mechanistic_role": "unknown",
+        "bypass_or_compensation": [
+          "cell-type-specific and context-dependent NOD2 effects",
+          "microbial and innate sensing redundancy"
+        ],
+        "unknowns": [
+          {
+            "field": "cellular_causality",
+            "reason": "The fixture does not establish the causal source-to-effector chain.",
+            "resolution_action": "Curate perturbational evidence by cell type and anatomical compartment in P1.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "target_validation"
+          }
+        ]
+      },
+      "direction": "unknown",
+      "polarity": "supports",
+      "evidence_ids": [
+        "ti:evidence:nod2-support-fixture"
+      ],
+      "uncertainty": "The beneficial direction may differ by cell state, anatomical region, and inflammatory phase.",
+      "curation_status": "illustrative_pending_expert_review",
+      "effect_size_missing_reason": "Synthetic fixture has no empirical effect estimate; primary-source extraction is required in P1."
+    }
+  ],
+  "claim_relations": [
+    {
+      "id": "ti:relation:il23a-limit-qualifies-mechanism",
+      "source_claim_id": "ti:claim:il23a-heterogeneity",
+      "target_claim_id": "ti:claim:il23a-mechanism",
+      "relation_type": "qualifies",
+      "notes": "Illustrative subgroup qualifier"
+    },
+    {
+      "id": "ti:relation:jak1-safety-qualifies-mechanism",
+      "source_claim_id": "ti:claim:jak1-safety",
+      "target_claim_id": "ti:claim:jak1-mechanism",
+      "relation_type": "qualifies",
+      "notes": "Illustrative therapeutic-window qualifier"
+    },
+    {
+      "id": "ti:relation:tnfsf15-biomarker-qualifies-mechanism",
+      "source_claim_id": "ti:claim:tnfsf15-biomarker",
+      "target_claim_id": "ti:claim:tnfsf15-mechanism",
+      "relation_type": "qualifies",
+      "notes": "Illustrative biomarker qualifier"
+    },
+    {
+      "id": "ti:relation:nod2-tractability-refutes-epithelial-readiness",
+      "source_claim_id": "ti:claim:nod2-tractability",
+      "target_claim_id": "ti:claim:nod2-epithelial-mechanism",
+      "relation_type": "refutes",
+      "notes": "Illustrative readiness blocker"
+    },
+    {
+      "id": "ti:relation:nod2-tractability-refutes-myeloid-readiness",
+      "source_claim_id": "ti:claim:nod2-tractability",
+      "target_claim_id": "ti:claim:nod2-myeloid-context",
+      "relation_type": "refutes",
+      "notes": "Direction and modality remain unresolved for the myeloid hypothesis."
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "ti:hypothesis:crohns-il23a-inhibit",
+      "as_of_date": "2026-10-31",
+      "indication": {
+        "namespace": "EFO",
+        "identifier": "EFO:0000384",
+        "label": "Crohn's disease",
+        "entity_type": "disease"
+      },
+      "population": "Illustrative IL-23-program-high adults with active disease",
+      "cell_state": "activated intestinal T-cell state",
+      "target": {
+        "entity": {
+          "namespace": "HGNC",
+          "identifier": "HGNC:15488",
+          "label": "IL23A",
+          "entity_type": "gene"
+        },
+        "biological_form": "protein_subunit",
+        "molecular_scope": "IL23A-encoded p19 within intact, bioactive IL-23 p19/p40 heterodimer; isolated p19 is not treated as equivalent to intact ligand",
+        "partner_entities": [
+          {
+            "namespace": "HGNC",
+            "identifier": "HGNC:5970",
+            "label": "IL12B",
+            "entity_type": "gene"
+          }
+        ],
+        "localization": [
+          "secreted cytokine complex",
+          "intestinal extracellular space"
+        ],
+        "unknowns": [
+          {
+            "field": "target_form",
+            "reason": "Relative importance of local versus systemic IL-23 pools is unreviewed.",
+            "resolution_action": "Map source compartments and exposure requirements from primary evidence.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "target_validation"
+          }
+        ]
+      },
+      "intervention": {
+        "direction": "inhibit",
+        "degree": "sustained pathway suppression",
+        "modality": "antibody",
+        "molecular_action": "Neutralize IL-23 p19-containing cytokine complex and prevent receptor activation",
+        "selectivity_requirements": [
+          "Avoid direct neutralization of IL-12 p35/p40 complex",
+          "Confirm p19-specific binding and functional blockade"
+        ],
+        "desired_distribution": "Sufficient intestinal and systemic exposure to suppress the intended IL-23 program",
+        "route": "Parenteral; exact route and schedule pending product-profile selection",
+        "target_engagement_criterion": {
+          "id": "ti:criterion:il23a-te",
+          "role": "target_engagement",
+          "endpoint": "Free intact IL-23 p19/p40 heterodimer with drug-bound ligand or validated functional engagement as orthogonal support",
+          "method": "Drug-tolerant assay qualified to distinguish intact free and drug-bound IL-23; orthogonal IL-23-induced signaling assay",
+          "matrix": "serum and intestinal biopsy",
+          "timepoint": "baseline and prespecified post-dose timepoints",
+          "expected_direction": "decrease free ligand or increase occupancy",
+          "threshold_status": "requires_pilot_data",
+          "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+          "failure_condition": "Target engagement does not reach the expert-defined threshold at feasible exposure.",
+          "inconclusive_condition": "Assay cannot distinguish free from bound ligand or tissue sampling is inadequate.",
+          "decision_role": "primary",
+          "required_for_current_gate": true,
+          "threshold_derivation": "From assay lower limit, drug interference/recovery experiments, and pilot concentration-response; isolated p19 signal alone is insufficient."
+        },
+        "pharmacodynamic_criteria": [
+          {
+            "id": "ti:criterion:il23a-pd",
+            "role": "pharmacodynamic",
+            "endpoint": "Locked two-axis mucosal IL-23 response score covering IL-23R-positive T-cell and ILC3 programs",
+            "method": "Prespecified cell-resolved transcript/protein panel with locked gates, QC, and axis weights",
+            "matrix": "intestinal biopsy",
+            "timepoint": "baseline and early on-treatment",
+            "expected_direction": "decrease",
+            "threshold_status": "requires_pilot_data",
+            "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+            "failure_condition": "Program reduction does not reach the expert-defined threshold despite confirmed engagement.",
+            "inconclusive_condition": "Baseline program is below assay range or biopsy quality fails QC.",
+            "decision_role": "primary",
+            "required_for_current_gate": true,
+            "threshold_derivation": "Require change beyond assay noise and biological variance plus movement across the pilot-locked activation boundary; lock using training donors before held-out testing."
+          }
+        ],
+        "safety_criteria": [
+          {
+            "id": "ti:criterion:il23a-safety",
+            "role": "safety",
+            "endpoint": "Prespecified infection and host-defense safety panel",
+            "method": "Clinical and laboratory safety assessment",
+            "matrix": "clinical record and blood",
+            "timepoint": "baseline and longitudinal",
+            "expected_direction": "remain within acceptable range",
+            "threshold_status": "requires_pilot_data",
+            "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+            "failure_condition": "A prespecified serious host-defense signal crosses the expert-defined stopping threshold.",
+            "inconclusive_condition": "Follow-up is insufficient for the selected risk window.",
+            "decision_role": "fatal_boundary",
+            "required_for_current_gate": true,
+            "threshold_derivation": "Use blinded pilot variance, assay precision, and a prespecified minimum biologically relevant effect; lock before held-out evaluation."
+          }
+        ],
+        "unknowns": [
+          {
+            "field": "quantitative_product_profile",
+            "reason": "No molecule-specific exposure or occupancy target is available in P0.1.",
+            "resolution_action": "Expert defines the minimum viable target product profile before scoring.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "target_validation"
+          }
+        ]
+      },
+      "mechanism_claim_ids": [
+        "ti:claim:il23a-mechanism"
+      ],
+      "biomarker": {
+        "id": "ti:biomarker:il23a-p01",
+        "name": "Mucosal IL-23-response signature",
+        "role": "predictive",
+        "features": [
+          "IL-23-responsive T-cell axis score",
+          "ILC3 axis score",
+          "source-cell IL-23 program",
+          "tissue cell-composition covariates"
+        ],
+        "matrix": "intestinal biopsy",
+        "assay": "Locked transcriptomic or protein-panel assay",
+        "sampling_timepoint": "Baseline, before treatment assignment",
+        "cutoff_criterion": {
+          "id": "ti:criterion:il23a-biomarker-cutoff",
+          "role": "biomarker_cutoff",
+          "endpoint": "Mucosal IL-23-response signature positivity cutoff",
+          "method": "Locked transcriptomic or protein-panel assay",
+          "matrix": "intestinal biopsy",
+          "timepoint": "baseline",
+          "expected_direction": "enrich perturbational or treatment response",
+          "threshold_status": "requires_pilot_data",
+          "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+          "failure_condition": "The locked cutoff does not predict differential response in a held-out cohort.",
+          "inconclusive_condition": "Assay QC, prevalence, or held-out sample size is inadequate.",
+          "decision_role": "primary",
+          "required_for_current_gate": true,
+          "threshold_derivation": "Use blinded pilot variance, assay precision, and a prespecified minimum biologically relevant effect; lock before held-out evaluation."
+        },
+        "decision_window_accessibility": "Conceptually available before treatment, but logistics and turnaround time require validation",
+        "analytical_validation": "concept_only",
+        "clinical_validation": "concept_only",
+        "unknowns": [
+          {
+            "field": "cutoff",
+            "reason": "No validated cutoff or locked feature set exists.",
+            "resolution_action": "Lock the assay and cutoff in training data, then test once in an independent cohort.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "target_validation"
+          }
+        ]
+      },
+      "supporting_claim_ids": [
+        "ti:claim:il23a-mechanism"
+      ],
+      "counterevidence_claim_ids": [
+        "ti:claim:il23a-heterogeneity"
+      ],
+      "fatal_assumption": "The proposed signature identifies a causally dependent and clinically reachable subgroup.",
+      "falsifiable_predictions": [
+        {
+          "id": "ti:prediction:il23a-exvivo",
+          "statement": "Target engagement suppresses the prespecified inflammatory program in biomarker-high tissue.",
+          "refutation_condition": "No reproducible program reduction versus matched control at feasible exposure.",
+          "decision_criterion": {
+            "id": "ti:criterion:il23a-prediction",
+            "role": "efficacy",
+            "endpoint": "Primary falsification endpoint for IL23A hypothesis",
+            "method": "Assay specified in the linked experiment action",
+            "matrix": "Relevant experimental model",
+            "timepoint": "Prespecified primary endpoint timepoint",
+            "expected_direction": "change in the hypothesized beneficial direction",
+            "threshold_status": "requires_pilot_data",
+            "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+            "failure_condition": "No reproducible program reduction versus matched control at feasible exposure.",
+            "inconclusive_condition": "Required controls fail, model lacks the baseline phenotype, or assay precision is inadequate.",
+            "decision_role": "primary",
+            "required_for_current_gate": true,
+            "threshold_derivation": "Joint rule: direct/functional engagement must pass and the locked two-axis PD score must exceed pilot noise and replicate in held-out donors versus matched control."
+          }
+        }
+      ],
+      "curation_status": "illustrative_pending_expert_review",
+      "review_notes": [
+        "Known-target-shaped positive-control card for testing dossier UX",
+        "P0.1: quantitative thresholds remain pending expert definition and are never imputed."
+      ],
+      "mechanism_context": {
+        "mechanistic_role": "contributing",
+        "source_cells": [
+          "intestinal antigen-presenting/myeloid source populations; exact subset to be locked from pilot mapping"
+        ],
+        "responding_cells": [
+          "IL-23R-positive CD4 T-cell candidate states, with Th17/Th1-like gating to be pilot-locked",
+          "ILC3 with a pilot-locked phenotypic or transcriptional definition"
+        ],
+        "effector_cells": [
+          "inflammatory IL-23-responsive T-cell axis",
+          "IL-23-responsive ILC3 axis"
+        ],
+        "anatomical_compartments": [
+          "terminal ileal mucosa",
+          "affected colonic mucosa"
+        ],
+        "bypass_or_compensation": [
+          "parallel inflammatory cytokine programs",
+          "IL-23-independent effector maintenance"
+        ],
+        "unknowns": [
+          {
+            "field": "requiredness",
+            "reason": "The fixture does not establish whether the mechanism is required or contributing.",
+            "resolution_action": "Use perturbation and rescue evidence to adjudicate requiredness in the intended subgroup.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "target_validation"
+          },
+          {
+            "field": "cell_axis_definition",
+            "reason": "The exact T-cell and ILC3 gates/signatures cannot be selected from the synthetic fixture.",
+            "resolution_action": "Use an assay-development pilot to lock gates and axis-specific features before held-out perturbation.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "target_validation"
+          }
+        ]
+      },
+      "decision_scope": "target_validation",
+      "current_gate": "ready_for_target_validation_experiment",
+      "non_goals": [
+        "Select or optimize a clinical candidate molecule",
+        "Invent numerical thresholds without pilot data",
+        "Predict clinical efficacy or safety from synthetic fixture content"
+      ]
+    },
+    {
+      "id": "ti:hypothesis:crohns-jak1-calibrated-inhibit",
+      "as_of_date": "2026-10-31",
+      "indication": {
+        "namespace": "EFO",
+        "identifier": "EFO:0000384",
+        "label": "Crohn's disease",
+        "entity_type": "disease"
+      },
+      "population": "Illustrative cytokine-convergence-high adults with active disease",
+      "cell_state": "multi-cytokine inflammatory immune state",
+      "target": {
+        "entity": {
+          "namespace": "HGNC",
+          "identifier": "HGNC:6190",
+          "label": "JAK1",
+          "entity_type": "gene"
+        },
+        "biological_form": "intracellular_enzyme",
+        "molecular_scope": "JAK1 kinase activity with intervention-specific selectivity against other JAK family members",
+        "partner_entities": [],
+        "localization": [
+          "intracellular",
+          "intestinal and systemic signaling compartments"
+        ],
+        "unknowns": [
+          {
+            "field": "selectivity_profile",
+            "reason": "No molecule or kinase selectivity panel is selected.",
+            "resolution_action": "Define a candidate product profile and quantitative selectivity panel before scoring tractability.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "target_validation"
+          }
+        ]
+      },
+      "intervention": {
+        "direction": "inhibit",
+        "degree": "partial or tissue-biased inhibition",
+        "modality": "small_molecule",
+        "molecular_action": "Partially inhibit JAK1-dependent signaling with an intestine-biased exposure profile",
+        "selectivity_requirements": [
+          "Comparable biochemical JAK1/JAK2/JAK3/TYK2 potency panel plus a broader kinome off-target panel",
+          "Cellular concentration-response panel with IL-6→pSTAT3 and IFN-family→pSTAT1/2 as JAK1-relevant axes",
+          "EPO→pSTAT5 constraint for JAK2 and IL-2→pSTAT5 constraint for JAK1/JAK3; no single cytokine assay is interpreted as kinase-specific",
+          "Intestinal and peripheral assays must use matched free-concentration and peak/trough timepoints"
+        ],
+        "desired_distribution": "Intestinal exposure above efficacy requirement while peripheral exposure remains below systemic suppression threshold",
+        "route": "Oral small molecule; formulation and local retention strategy unresolved",
+        "target_engagement_criterion": {
+          "id": "ti:criterion:jak1-te",
+          "role": "target_engagement",
+          "endpoint": "Cellular JAK1 pathway engagement",
+          "method": "Validated cellular target-engagement or proximal signaling assay",
+          "matrix": "intestinal biopsy and peripheral blood",
+          "timepoint": "matched concentration and time course",
+          "expected_direction": "higher intestinal than peripheral engagement",
+          "threshold_status": "requires_pilot_data",
+          "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+          "failure_condition": "No separable tissue engagement window is observed.",
+          "inconclusive_condition": "Free tissue concentration or assay calibration is unavailable.",
+          "decision_role": "primary",
+          "required_for_current_gate": true,
+          "threshold_derivation": "Use blinded pilot variance, assay precision, and a prespecified minimum biologically relevant effect; lock before held-out evaluation."
+        },
+        "pharmacodynamic_criteria": [
+          {
+            "id": "ti:criterion:jak1-pd",
+            "role": "pharmacodynamic",
+            "endpoint": "Cell-resolved intestinal cytokine-induced pSTAT panel",
+            "method": "Matched baseline and short-stimulation phospho-flow in epithelial, CD4 T, and myeloid gates using a locked cytokine panel",
+            "matrix": "intestinal biopsy-derived epithelial and immune cells",
+            "timepoint": "pre-dose, candidate-specific peak, and trough; ex vivo stimulation read at locked minute-scale windows",
+            "expected_direction": "decrease",
+            "threshold_status": "requires_pilot_data",
+            "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+            "failure_condition": "Intestinal PD does not reach the expert-defined efficacy threshold.",
+            "inconclusive_condition": "Cell recovery or stimulation controls fail.",
+            "decision_role": "primary",
+            "required_for_current_gate": true,
+            "threshold_derivation": "Fit intestinal concentration-response curves from pilot tissue and lock the minimum PD effect associated with the intended mechanism before prospective comparison."
+          },
+          {
+            "id": "ti:criterion:jak1-window-margin",
+            "role": "pharmacodynamic",
+            "endpoint": "Intestinal-to-systemic therapeutic-window margin",
+            "method": "Joint PK/PD model using matched intestinal efficacy and peripheral pathway-suppression concentration-response curves",
+            "matrix": "intestinal biopsy and whole blood/PBMC",
+            "timepoint": "matched pre-dose, peak, and trough",
+            "expected_direction": "systemic safety-limit exposure divided by intestinal efficacy-requirement exposure should exceed a locked margin",
+            "decision_role": "primary",
+            "required_for_current_gate": true,
+            "threshold_status": "requires_pilot_data",
+            "threshold_derivation": "Estimate EC_int and exposure at the peripheral suppression limit from blinded pilot curves; define Margin = Exposure_safety_limit / Exposure_intestinal_efficacy and lock the required lower confidence bound before candidate comparison.",
+            "rationale": "The contract fixes how the boundary is derived; it does not fabricate a value without pilot or candidate data.",
+            "failure_condition": "The lower confidence bound of the margin fails the candidate-profile requirement.",
+            "inconclusive_condition": "Either curve is non-identifiable, free concentrations are unavailable, or tissue/blood timepoints are not comparable."
+          }
+        ],
+        "safety_criteria": [
+          {
+            "id": "ti:criterion:jak1-safety",
+            "role": "safety",
+            "endpoint": "Peripheral pSTAT1/pSTAT3/pSTAT5 suppression across myeloid and lymphoid gates",
+            "method": "Matched whole-blood/PBMC cytokine-stimulation panel including EPO and IL-2 constraint assays",
+            "matrix": "blood and clinical record",
+            "timepoint": "pre-dose, candidate-specific peak, and trough",
+            "expected_direction": "remain below systemic suppression limit",
+            "threshold_status": "requires_pilot_data",
+            "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+            "failure_condition": "Systemic PD or a prespecified safety endpoint crosses the expert-defined stopping threshold.",
+            "inconclusive_condition": "The selected model cannot estimate the relevant clinical risk window.",
+            "decision_role": "fatal_boundary",
+            "required_for_current_gate": true,
+            "threshold_derivation": "Use pilot concentration-response and a target product profile to lock the maximum allowed pathway suppression; this boundary is candidate-specific, not a gene-level constant."
+          },
+          {
+            "id": "ti:criterion:jak1-clinical-class-safety",
+            "role": "safety",
+            "endpoint": "Clinical JAK-class safety and stopping rules",
+            "method": "Protocol-defined infection, hematology, hepatic, thrombotic, cardiovascular, and malignancy surveillance",
+            "matrix": "clinical record and laboratory samples",
+            "timepoint": "clinical development schedule",
+            "expected_direction": "remain inside candidate- and population-specific stopping boundaries",
+            "decision_role": "fatal_boundary",
+            "required_for_current_gate": false,
+            "threshold_status": "deferred_to_later_stage",
+            "threshold_derivation": "Derive only after candidate, dose, population, and regulatory phase are known; follow protocol and regulatory guidance rather than a target-card constant.",
+            "rationale": "The contract fixes how the boundary is derived; it does not fabricate a value without pilot or candidate data.",
+            "failure_condition": "A protocol-defined serious event or laboratory stopping rule is met.",
+            "inconclusive_condition": "Exposure duration or population size is insufficient to assess the event class."
+          }
+        ],
+        "unknowns": [
+          {
+            "field": "quantitative_product_profile",
+            "reason": "No molecule-specific exposure or occupancy target is available in P0.1.",
+            "resolution_action": "Expert defines the minimum viable target product profile before scoring.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "target_validation"
+          },
+          {
+            "field": "clinical_stopping_thresholds",
+            "reason": "Clinical limits depend on candidate, dose, population, and development phase.",
+            "resolution_action": "Specify in candidate/clinical protocols using empirical and regulatory inputs.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "clinical_development"
+          }
+        ]
+      },
+      "mechanism_claim_ids": [
+        "ti:claim:jak1-mechanism"
+      ],
+      "biomarker": {
+        "id": "ti:biomarker:jak1-p01",
+        "name": "Composite cytokine phospho-signaling score",
+        "role": "predictive",
+        "features": [
+          "stimulus-specific phospho-signaling features",
+          "intestinal-to-peripheral PD contrast"
+        ],
+        "matrix": "intestinal biopsy and blood",
+        "assay": "Standardized phospho-flow or equivalent assay",
+        "sampling_timepoint": "Baseline, before treatment assignment",
+        "cutoff_criterion": {
+          "id": "ti:criterion:jak1-biomarker-cutoff",
+          "role": "biomarker_cutoff",
+          "endpoint": "Composite cytokine phospho-signaling score positivity cutoff",
+          "method": "Standardized phospho-flow or equivalent assay",
+          "matrix": "intestinal biopsy and blood",
+          "timepoint": "baseline",
+          "expected_direction": "enrich perturbational or treatment response",
+          "threshold_status": "requires_pilot_data",
+          "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+          "failure_condition": "The locked cutoff does not predict differential response in a held-out cohort.",
+          "inconclusive_condition": "Assay QC, prevalence, or held-out sample size is inadequate.",
+          "decision_role": "primary",
+          "required_for_current_gate": true,
+          "threshold_derivation": "Use blinded pilot variance, assay precision, and a prespecified minimum biologically relevant effect; lock before held-out evaluation."
+        },
+        "decision_window_accessibility": "Conceptually available before treatment, but logistics and turnaround time require validation",
+        "analytical_validation": "concept_only",
+        "clinical_validation": "concept_only",
+        "unknowns": [
+          {
+            "field": "cutoff",
+            "reason": "No validated cutoff or locked feature set exists.",
+            "resolution_action": "Lock the assay and cutoff in training data, then test once in an independent cohort.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "target_validation"
+          }
+        ]
+      },
+      "supporting_claim_ids": [
+        "ti:claim:jak1-mechanism"
+      ],
+      "counterevidence_claim_ids": [
+        "ti:claim:jak1-safety"
+      ],
+      "fatal_assumption": "A useful intestinal exposure window can be separated from systemic pathway suppression.",
+      "falsifiable_predictions": [
+        {
+          "id": "ti:prediction:jak1-window",
+          "statement": "A predefined local efficacy signal is achieved below a systemic safety threshold.",
+          "refutation_condition": "Effective exposure consistently overlaps or exceeds the prespecified safety threshold.",
+          "decision_criterion": {
+            "id": "ti:criterion:jak1-prediction",
+            "role": "efficacy",
+            "endpoint": "Primary falsification endpoint for JAK1 hypothesis",
+            "method": "Assay specified in the linked experiment action",
+            "matrix": "Relevant experimental model",
+            "timepoint": "Prespecified primary endpoint timepoint",
+            "expected_direction": "change in the hypothesized beneficial direction",
+            "threshold_status": "requires_pilot_data",
+            "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+            "failure_condition": "Effective exposure consistently overlaps or exceeds the prespecified safety threshold.",
+            "inconclusive_condition": "Required controls fail, model lacks the baseline phenotype, or assay precision is inadequate.",
+            "decision_role": "primary",
+            "required_for_current_gate": true,
+            "threshold_derivation": "Use blinded pilot variance, assay precision, and a prespecified minimum biologically relevant effect; lock before held-out evaluation."
+          }
+        }
+      ],
+      "curation_status": "illustrative_pending_expert_review",
+      "review_notes": [
+        "Direction and degree are explicit; no clinical claim is made",
+        "P0.1: quantitative thresholds remain pending expert definition and are never imputed."
+      ],
+      "mechanism_context": {
+        "mechanistic_role": "contributing",
+        "source_cells": [
+          "multiple cytokine-producing immune and stromal populations"
+        ],
+        "responding_cells": [
+          "JAK1-dependent intestinal immune and epithelial populations"
+        ],
+        "effector_cells": [
+          "multi-cytokine inflammatory immune states"
+        ],
+        "anatomical_compartments": [
+          "terminal ileal mucosa",
+          "affected colonic mucosa"
+        ],
+        "bypass_or_compensation": [
+          "JAK1-independent cytokine signaling",
+          "redundant inflammatory pathways"
+        ],
+        "unknowns": [
+          {
+            "field": "requiredness",
+            "reason": "The fixture does not establish whether the mechanism is required or contributing.",
+            "resolution_action": "Use perturbation and rescue evidence to adjudicate requiredness in the intended subgroup.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "target_validation"
+          }
+        ]
+      },
+      "decision_scope": "target_validation",
+      "current_gate": "ready_for_target_validation_experiment",
+      "non_goals": [
+        "Select or optimize a clinical candidate molecule",
+        "Invent numerical thresholds without pilot data",
+        "Predict clinical efficacy or safety from synthetic fixture content"
+      ]
+    },
+    {
+      "id": "ti:hypothesis:crohns-tnfsf15-inhibit",
+      "as_of_date": "2026-10-31",
+      "indication": {
+        "namespace": "EFO",
+        "identifier": "EFO:0000384",
+        "label": "Crohn's disease",
+        "entity_type": "disease"
+      },
+      "population": "Hypothetical TNFSF15-program-high adults with active disease",
+      "cell_state": "immune-stromal inflammatory state",
+      "target": {
+        "entity": {
+          "namespace": "HGNC",
+          "identifier": "HGNC:11931",
+          "label": "TNFSF15",
+          "entity_type": "gene"
+        },
+        "biological_form": "membrane_and_soluble_ligand",
+        "molecular_scope": "Soluble and membrane TL1A, signaling through DR3/TNFRSF25; soluble DcR3/TNFRSF6B is a conditional ligand-availability modifier",
+        "partner_entities": [
+          {
+            "namespace": "HGNC",
+            "identifier": "HGNC:11910",
+            "label": "TNFRSF25",
+            "entity_type": "gene"
+          },
+          {
+            "namespace": "HGNC",
+            "identifier": "HGNC:11921",
+            "label": "TNFRSF6B",
+            "entity_type": "gene"
+          }
+        ],
+        "localization": [
+          "cell surface",
+          "intestinal extracellular space",
+          "circulation"
+        ],
+        "unknowns": [
+          {
+            "field": "form_contribution",
+            "reason": "The disease contribution of soluble versus membrane TL1A is unresolved.",
+            "resolution_action": "Measure both forms and form-specific pathway activity in relevant compartments.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "target_validation"
+          },
+          {
+            "field": "dcr3_relevance",
+            "reason": "DcR3 binds TL1A, but its value as a required stratifier in the intended Crohn's subgroup is unestablished.",
+            "resolution_action": "Include DcR3 only if pilot abundance or competition data materially explain free TL1A or DR3-response variance.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "target_validation"
+          }
+        ]
+      },
+      "intervention": {
+        "direction": "inhibit",
+        "degree": "neutralize extracellular signaling",
+        "modality": "antibody",
+        "molecular_action": "Neutralize extracellular TL1A and prevent DR3 signaling",
+        "selectivity_requirements": [
+          "Quantify binding to soluble and membrane TL1A",
+          "Confirm blockade of TL1A-DR3 signaling without unintended TNF-family interactions"
+        ],
+        "desired_distribution": "Reach TL1A-producing and DR3-responsive compartments in affected intestinal mucosa",
+        "route": "Parenteral antibody; exact route and schedule pending product-profile selection",
+        "target_engagement_criterion": {
+          "id": "ti:criterion:tnfsf15-te",
+          "role": "target_engagement",
+          "endpoint": "Free soluble TL1A plus membrane TL1A occupancy",
+          "method": "Form-aware ligand and occupancy assays",
+          "matrix": "serum and intestinal biopsy",
+          "timepoint": "baseline and post-dose",
+          "expected_direction": "decrease free ligand and increase occupancy",
+          "threshold_status": "requires_pilot_data",
+          "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+          "failure_condition": "Neither soluble nor membrane target engagement reaches the expert-defined threshold.",
+          "inconclusive_condition": "Assays cannot resolve ligand form or drug-bound analyte interference.",
+          "decision_role": "primary",
+          "required_for_current_gate": true,
+          "threshold_derivation": "Qualify form-specific assays for soluble free/drug-bound TL1A and membrane occupancy; require interpretable engagement for each form shown by pilot data to contribute materially to DR3-response variance."
+        },
+        "pharmacodynamic_criteria": [
+          {
+            "id": "ti:criterion:tnfsf15-pd",
+            "role": "pharmacodynamic",
+            "endpoint": "DR3-responsive immune-stromal program",
+            "method": "Locked tissue multi-omic or protein-panel score",
+            "matrix": "intestinal biopsy",
+            "timepoint": "baseline and early on-treatment",
+            "expected_direction": "decrease pathogenic program",
+            "threshold_status": "requires_pilot_data",
+            "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+            "failure_condition": "The prespecified DR3-response program is unchanged despite confirmed engagement.",
+            "inconclusive_condition": "The baseline program is absent or tissue composition changes invalidate comparison.",
+            "decision_role": "primary",
+            "required_for_current_gate": true,
+            "threshold_derivation": "Use blinded pilot variance, assay precision, and a prespecified minimum biologically relevant effect; lock before held-out evaluation."
+          }
+        ],
+        "safety_criteria": [
+          {
+            "id": "ti:criterion:tnfsf15-safety",
+            "role": "safety",
+            "endpoint": "Prespecified immune homeostasis and host-defense panel",
+            "method": "Clinical, cellular, and laboratory monitoring",
+            "matrix": "blood, tissue, and clinical record",
+            "timepoint": "baseline and longitudinal",
+            "expected_direction": "remain within acceptable range",
+            "threshold_status": "requires_pilot_data",
+            "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+            "failure_condition": "A prespecified host-defense or immune-homeostasis endpoint crosses the stopping threshold.",
+            "inconclusive_condition": "The model does not represent the relevant risk mechanism.",
+            "decision_role": "fatal_boundary",
+            "required_for_current_gate": true,
+            "threshold_derivation": "Use blinded pilot variance, assay precision, and a prespecified minimum biologically relevant effect; lock before held-out evaluation."
+          }
+        ],
+        "unknowns": [
+          {
+            "field": "quantitative_product_profile",
+            "reason": "No molecule-specific exposure or occupancy target is available in P0.1.",
+            "resolution_action": "Expert defines the minimum viable target product profile before scoring.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "target_validation"
+          }
+        ]
+      },
+      "mechanism_claim_ids": [
+        "ti:claim:tnfsf15-mechanism"
+      ],
+      "biomarker": {
+        "id": "ti:biomarker:tnfsf15-p01",
+        "name": "TNFSF15-associated tissue and blood signature",
+        "role": "predictive",
+        "features": [
+          "soluble and membrane TL1A availability",
+          "DR3 expression in responding cell populations",
+          "locked DR3-response program",
+          "immune-stromal state and responding-cell composition",
+          "DcR3 abundance only if pilot data meet the conditional inclusion rule"
+        ],
+        "matrix": "intestinal biopsy and blood",
+        "assay": "Locked multi-analyte assay",
+        "sampling_timepoint": "Baseline, before treatment assignment",
+        "cutoff_criterion": {
+          "id": "ti:criterion:tnfsf15-biomarker-cutoff",
+          "role": "biomarker_cutoff",
+          "endpoint": "TNFSF15-associated tissue and blood signature positivity cutoff",
+          "method": "Locked multi-analyte assay",
+          "matrix": "intestinal biopsy and blood",
+          "timepoint": "baseline",
+          "expected_direction": "enrich perturbational or treatment response",
+          "threshold_status": "requires_pilot_data",
+          "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+          "failure_condition": "The locked cutoff does not predict differential response in a held-out cohort.",
+          "inconclusive_condition": "Assay QC, prevalence, or held-out sample size is inadequate.",
+          "decision_role": "primary",
+          "required_for_current_gate": true,
+          "threshold_derivation": "Use blinded pilot variance, assay precision, and a prespecified minimum biologically relevant effect; lock before held-out evaluation."
+        },
+        "decision_window_accessibility": "Conceptually available before treatment, but logistics and turnaround time require validation",
+        "analytical_validation": "concept_only",
+        "clinical_validation": "concept_only",
+        "unknowns": [
+          {
+            "field": "cutoff",
+            "reason": "No validated cutoff or locked feature set exists.",
+            "resolution_action": "Lock the assay and cutoff in training data, then test once in an independent cohort.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "target_validation"
+          }
+        ]
+      },
+      "supporting_claim_ids": [
+        "ti:claim:tnfsf15-mechanism"
+      ],
+      "counterevidence_claim_ids": [
+        "ti:claim:tnfsf15-biomarker"
+      ],
+      "fatal_assumption": "The biomarker is predictive rather than merely prognostic or correlated.",
+      "falsifiable_predictions": [
+        {
+          "id": "ti:prediction:tnfsf15-perturb",
+          "statement": "In a held-out perturbation cohort, the locked baseline biomarker modifies the effect of TL1A blockade versus matched control rather than merely associating with outcome.",
+          "refutation_condition": "The prespecified biomarker-by-treatment interaction is absent or the biomarker is similarly associated with outcome in treated and control arms.",
+          "decision_criterion": {
+            "id": "ti:criterion:tnfsf15-prediction",
+            "role": "efficacy",
+            "endpoint": "Biomarker-by-perturbation interaction on the locked DR3-response endpoint",
+            "method": "Held-out factorial comparison of blockade versus matched control across locked biomarker strata",
+            "matrix": "Relevant experimental model",
+            "timepoint": "Prespecified primary endpoint timepoint",
+            "expected_direction": "change in the hypothesized beneficial direction",
+            "threshold_status": "requires_pilot_data",
+            "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+            "failure_condition": "The prespecified biomarker-by-treatment interaction is absent or the biomarker is similarly associated with outcome in treated and control arms.",
+            "inconclusive_condition": "Required controls fail, model lacks the baseline phenotype, or assay precision is inadequate.",
+            "decision_role": "primary",
+            "required_for_current_gate": true,
+            "threshold_derivation": "Train the cutoff without outcome leakage, power the interaction from pilot variance, and lock the interaction estimand and confidence-bound rule before held-out evaluation."
+          }
+        }
+      ],
+      "curation_status": "illustrative_pending_expert_review",
+      "review_notes": [
+        "Candidate card for testing novelty and biomarker reasoning",
+        "P0.1: quantitative thresholds remain pending expert definition and are never imputed."
+      ],
+      "mechanism_context": {
+        "mechanistic_role": "contributing",
+        "source_cells": [
+          "intestinal mononuclear phagocytes and other TL1A-producing cells"
+        ],
+        "responding_cells": [
+          "DR3-positive lymphoid populations",
+          "responsive stromal-immune states"
+        ],
+        "effector_cells": [
+          "T-cell, innate lymphoid, and immune-stromal inflammatory states"
+        ],
+        "anatomical_compartments": [
+          "terminal ileal mucosa",
+          "affected colonic mucosa"
+        ],
+        "bypass_or_compensation": [
+          "DR3-independent inflammatory programs",
+          "ligand and receptor form heterogeneity"
+        ],
+        "unknowns": [
+          {
+            "field": "requiredness",
+            "reason": "The fixture does not establish whether the mechanism is required or contributing.",
+            "resolution_action": "Use perturbation and rescue evidence to adjudicate requiredness in the intended subgroup.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "target_validation"
+          }
+        ]
+      },
+      "decision_scope": "target_validation",
+      "current_gate": "ready_for_target_validation_experiment",
+      "non_goals": [
+        "Select or optimize a clinical candidate molecule",
+        "Invent numerical thresholds without pilot data",
+        "Predict clinical efficacy or safety from synthetic fixture content"
+      ]
+    },
+    {
+      "id": "ti:hypothesis:crohns-nod2-epithelial-rescue",
+      "as_of_date": "2026-10-31",
+      "indication": {
+        "namespace": "EFO",
+        "identifier": "EFO:0000384",
+        "label": "Crohn's disease",
+        "entity_type": "disease"
+      },
+      "population": "Functionally confirmed epithelial NOD2-loss subgroup; illustrative",
+      "cell_state": "intestinal epithelial repair/homeostasis failure state",
+      "target": {
+        "entity": {
+          "namespace": "HGNC",
+          "identifier": "HGNC:5331",
+          "label": "NOD2",
+          "entity_type": "gene"
+        },
+        "biological_form": "intracellular_sensor",
+        "molecular_scope": "Restore deficient NOD2 sensing specifically in intestinal epithelial cells",
+        "partner_entities": [],
+        "localization": [
+          "intestinal epithelial intracellular compartment"
+        ],
+        "unknowns": [
+          {
+            "field": "delivery",
+            "reason": "No epithelial delivery system is selected at target-validation stage.",
+            "resolution_action": "First establish causal rescue ex vivo; select delivery during candidate optimization.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "candidate_optimization"
+          }
+        ]
+      },
+      "intervention": {
+        "direction": "replace",
+        "degree": "restore epithelial function into a matched WT reference distribution without overshoot",
+        "modality": "unknown",
+        "molecular_action": "Experimental epithelial-specific functional rescue; delivery modality deliberately not selected",
+        "selectivity_requirements": [
+          "Restrict rescue to the intended cell compartment",
+          "Avoid non-physiological or constitutive pathway activation"
+        ],
+        "desired_distribution": "intestinal epithelial-cell restricted",
+        "route": "deferred until causal rescue is established",
+        "target_engagement_criterion": {
+          "id": "ti:criterion:nod2-epithelial-te",
+          "role": "target_engagement",
+          "endpoint": "Epithelial NOD2 functional-response restoration relative to matched WT and loss-of-function distributions",
+          "method": "Genotype-aware expression and functional response assay",
+          "matrix": "engineered intestinal epithelial and myeloid models",
+          "timepoint": "after rescue and standardized challenge",
+          "expected_direction": "restore toward reference range",
+          "threshold_status": "requires_pilot_data",
+          "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+          "failure_condition": "Functional restoration does not reach the expert-defined physiological range.",
+          "inconclusive_condition": "Expression changes cannot be separated from functional rescue.",
+          "decision_role": "primary",
+          "required_for_current_gate": true,
+          "threshold_derivation": "In the same isogenic system and stimulus curve, define normalized restoration = (rescue - loss)/(WT - loss); lock the acceptable WT-derived band from blinded pilot replicates."
+        },
+        "pharmacodynamic_criteria": [
+          {
+            "id": "ti:criterion:nod2-epithelial-pd",
+            "role": "pharmacodynamic",
+            "endpoint": "Epithelial barrier, repair, and stress-response composite",
+            "method": "Orthogonal permeability/barrier, repair-state, viability, and transcriptional assays",
+            "matrix": "cell-type-specific intestinal model",
+            "timepoint": "baseline, post-rescue, and post-challenge",
+            "expected_direction": "normalize toward matched reference",
+            "threshold_status": "requires_pilot_data",
+            "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+            "failure_condition": "The prespecified phenotype is not rescued despite confirmed functional engagement.",
+            "inconclusive_condition": "The model lacks the baseline defect or rescue control.",
+            "decision_role": "primary",
+            "required_for_current_gate": true,
+            "threshold_derivation": "Lock a multivariate WT reference band and minimum rescue effect from isogenic pilot distributions; require replication without worsening any fatal component."
+          }
+        ],
+        "safety_criteria": [
+          {
+            "id": "ti:criterion:nod2-epithelial-safety",
+            "role": "safety",
+            "endpoint": "Epithelial inflammatory overshoot, barrier damage, and cell-death ceiling",
+            "method": "NF-κB/IRF response, inflammatory cytokines, permeability, stress, and viability with an excessive-activation positive control",
+            "matrix": "target cells and supernatant",
+            "timepoint": "acute and sustained post-rescue timepoints",
+            "expected_direction": "remain below activation ceiling",
+            "threshold_status": "requires_pilot_data",
+            "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+            "failure_condition": "Any prespecified excessive-activation endpoint crosses the expert-defined ceiling.",
+            "inconclusive_condition": "The assay lacks a calibrated excessive-activation positive control.",
+            "decision_role": "fatal_boundary",
+            "required_for_current_gate": true,
+            "threshold_derivation": "Use the upper WT reference band and calibrated excessive-activation control to lock fatal ceilings; sustained barrier loss or cell-death increase is direct no-go."
+          }
+        ],
+        "unknowns": [
+          {
+            "field": "modality",
+            "reason": "Target validation should not pre-commit to gene therapy.",
+            "resolution_action": "Compare feasible local restoration modalities only after epithelial causal rescue passes.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "candidate_optimization"
+          }
+        ]
+      },
+      "mechanism_claim_ids": [
+        "ti:claim:nod2-epithelial-mechanism"
+      ],
+      "biomarker": {
+        "id": "ti:biomarker:nod2-epithelial-p02",
+        "name": "Epithelial functional NOD2-deficiency classifier",
+        "role": "predictive",
+        "features": [
+          "NOD2 genotype",
+          "epithelial stimulus-response defect",
+          "baseline epithelial barrier/repair state"
+        ],
+        "matrix": "genomic DNA and patient-derived intestinal epithelial model",
+        "assay": "Genotype assay plus functional challenge assay",
+        "sampling_timepoint": "Baseline, before treatment assignment",
+        "cutoff_criterion": {
+          "id": "ti:criterion:nod2-epithelial-biomarker-cutoff",
+          "role": "biomarker_cutoff",
+          "endpoint": "Functional NOD2 deficiency classifier positivity cutoff",
+          "method": "Genotype assay plus functional challenge assay",
+          "matrix": "genomic DNA and patient-derived cellular model",
+          "timepoint": "baseline",
+          "expected_direction": "enrich perturbational or treatment response",
+          "threshold_status": "requires_pilot_data",
+          "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+          "failure_condition": "The locked cutoff does not predict differential response in a held-out cohort.",
+          "inconclusive_condition": "Assay QC, prevalence, or held-out sample size is inadequate.",
+          "decision_role": "primary",
+          "required_for_current_gate": true,
+          "threshold_derivation": "Use blinded pilot variance, assay precision, and a prespecified minimum biologically relevant effect; lock before held-out evaluation."
+        },
+        "decision_window_accessibility": "Conceptually available before treatment, but logistics and turnaround time require validation",
+        "analytical_validation": "concept_only",
+        "clinical_validation": "concept_only",
+        "unknowns": [
+          {
+            "field": "cutoff",
+            "reason": "No validated cutoff or locked feature set exists.",
+            "resolution_action": "Lock the assay and cutoff in training data, then test once in an independent cohort.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "target_validation"
+          }
+        ]
+      },
+      "supporting_claim_ids": [
+        "ti:claim:nod2-epithelial-mechanism"
+      ],
+      "counterevidence_claim_ids": [
+        "ti:claim:nod2-tractability"
+      ],
+      "fatal_assumption": "Cell-restricted epithelial NOD2 restoration causally rescues barrier/repair biology without inflammatory over-correction.",
+      "falsifiable_predictions": [
+        {
+          "id": "ti:prediction:nod2-epithelial-rescue",
+          "statement": "Epithelial-specific rescue moves the prespecified functional and barrier phenotype into the matched WT reference band without inflammatory overshoot.",
+          "refutation_condition": "Functional/barrier rescue fails the locked WT-band rule or any fatal inflammatory, barrier-damage, or cell-death ceiling is crossed.",
+          "decision_criterion": {
+            "id": "ti:criterion:nod2-epithelial-prediction",
+            "role": "efficacy",
+            "endpoint": "Primary falsification endpoint for NOD2 hypothesis",
+            "method": "Assay specified in the linked experiment action",
+            "matrix": "Relevant experimental model",
+            "timepoint": "Prespecified primary endpoint timepoint",
+            "expected_direction": "change in the hypothesized beneficial direction",
+            "threshold_status": "requires_pilot_data",
+            "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+            "failure_condition": "Phenotype is not rescued or rescue produces a prespecified excessive-activation signal.",
+            "inconclusive_condition": "Required controls fail, model lacks the baseline phenotype, or assay precision is inadequate.",
+            "decision_role": "primary",
+            "required_for_current_gate": true,
+            "threshold_derivation": "Joint isogenic rule using normalized restoration and WT distribution; lock all fatal ceilings before held-out rescue experiments."
+          }
+        }
+      ],
+      "curation_status": "illustrative_pending_expert_review",
+      "review_notes": [
+        "Deliberate abstention card: high mechanistic and modality uncertainty",
+        "P0.1: quantitative thresholds remain pending expert definition and are never imputed."
+      ],
+      "mechanism_context": {
+        "mechanistic_role": "contributing",
+        "source_cells": [
+          "not applicable; intracellular sensing occurs in target cells"
+        ],
+        "responding_cells": [
+          "intestinal epithelial cells"
+        ],
+        "effector_cells": [
+          "epithelial repair and barrier states"
+        ],
+        "anatomical_compartments": [
+          "terminal ileal mucosa",
+          "affected colonic mucosa"
+        ],
+        "bypass_or_compensation": [
+          "cell-type-specific and context-dependent NOD2 effects",
+          "microbial and innate sensing redundancy"
+        ],
+        "unknowns": [
+          {
+            "field": "reference_distribution",
+            "reason": "The physiological rescue band requires matched WT pilot data.",
+            "resolution_action": "Lock a WT reference distribution in the same genotype, assay, stimulus, and cell system.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "target_validation"
+          }
+        ]
+      },
+      "decision_scope": "target_validation",
+      "current_gate": "ready_for_target_validation_experiment",
+      "non_goals": [
+        "Select or optimize a clinical candidate molecule",
+        "Invent numerical thresholds without pilot data",
+        "Predict clinical efficacy or safety from synthetic fixture content"
+      ]
+    },
+    {
+      "id": "ti:hypothesis:crohns-nod2-myeloid-direction",
+      "as_of_date": "2026-10-31",
+      "indication": {
+        "namespace": "EFO",
+        "identifier": "EFO:0000384",
+        "label": "Crohn's disease",
+        "entity_type": "disease"
+      },
+      "population": "Functionally confirmed myeloid NOD2-altered subgroup; illustrative",
+      "cell_state": "context-dependent myeloid sensing and inflammatory-resolution state",
+      "target": {
+        "entity": {
+          "namespace": "HGNC",
+          "identifier": "HGNC:5331",
+          "label": "NOD2",
+          "entity_type": "gene"
+        },
+        "biological_form": "intracellular_sensor",
+        "molecular_scope": "Determine the beneficial direction of NOD2 modulation specifically in intestinal myeloid cells",
+        "partner_entities": [],
+        "localization": [
+          "intestinal myeloid intracellular compartment"
+        ],
+        "unknowns": [
+          {
+            "field": "delivery",
+            "reason": "No epithelial delivery system is selected at target-validation stage.",
+            "resolution_action": "First establish causal rescue ex vivo; select delivery during candidate optimization.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "candidate_optimization"
+          }
+        ]
+      },
+      "intervention": {
+        "direction": "unknown",
+        "degree": "bidirectional perturbation to identify a reproducible beneficial range",
+        "modality": "unknown",
+        "molecular_action": "Direction-finding perturbation of myeloid NOD2; no therapeutic modality selected",
+        "selectivity_requirements": [
+          "Restrict rescue to the intended cell compartment",
+          "Avoid non-physiological or constitutive pathway activation"
+        ],
+        "desired_distribution": "myeloid-cell restricted experimental perturbation",
+        "route": "deferred until causal rescue is established",
+        "target_engagement_criterion": {
+          "id": "ti:criterion:nod2-myeloid-te",
+          "role": "target_engagement",
+          "endpoint": "Bidirectional myeloid NOD2 functional perturbation",
+          "method": "Genotype-aware expression and functional response assay",
+          "matrix": "engineered intestinal epithelial and myeloid models",
+          "timepoint": "after rescue and standardized challenge",
+          "expected_direction": "restore toward reference range",
+          "threshold_status": "requires_pilot_data",
+          "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+          "failure_condition": "Functional restoration does not reach the expert-defined physiological range.",
+          "inconclusive_condition": "Expression changes cannot be separated from functional rescue.",
+          "decision_role": "primary",
+          "required_for_current_gate": true,
+          "threshold_derivation": "Calibrate loss, physiological WT, and gain-of-function response bands in the same myeloid system before interpreting disease phenotypes."
+        },
+        "pharmacodynamic_criteria": [
+          {
+            "id": "ti:criterion:nod2-myeloid-pd",
+            "role": "pharmacodynamic",
+            "endpoint": "Myeloid inflammatory-resolution and tissue-repair response",
+            "method": "Cytokine, microbial-response, phagocytic, tissue-repair, and cell-state panel across acute and resolution contexts",
+            "matrix": "cell-type-specific intestinal model",
+            "timepoint": "baseline, post-rescue, and post-challenge",
+            "expected_direction": "normalize toward matched reference",
+            "threshold_status": "requires_pilot_data",
+            "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+            "failure_condition": "The prespecified phenotype is not rescued despite confirmed functional engagement.",
+            "inconclusive_condition": "The model lacks the baseline defect or rescue control.",
+            "decision_role": "primary",
+            "required_for_current_gate": true,
+            "threshold_derivation": "Require a consistent beneficial direction across prespecified contexts and independent models; context reversal is a direct abstention trigger."
+          }
+        ],
+        "safety_criteria": [
+          {
+            "id": "ti:criterion:nod2-myeloid-safety",
+            "role": "safety",
+            "endpoint": "Myeloid inflammatory escalation and impaired host-response ceiling",
+            "method": "TNF/IL-1β/IL-6/IL-12-23p40, NF-κB/IRF dynamics, inflammasome where validated, viability, and microbial-response competence",
+            "matrix": "target cells and supernatant",
+            "timepoint": "acute and sustained post-rescue timepoints",
+            "expected_direction": "remain below activation ceiling",
+            "threshold_status": "requires_pilot_data",
+            "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+            "failure_condition": "Any prespecified excessive-activation endpoint crosses the expert-defined ceiling.",
+            "inconclusive_condition": "The assay lacks a calibrated excessive-activation positive control.",
+            "decision_role": "fatal_boundary",
+            "required_for_current_gate": true,
+            "threshold_derivation": "Lock WT and excessive-activation control bands; sustained pro-inflammatory overshoot or material host-response impairment is fatal."
+          }
+        ],
+        "unknowns": [
+          {
+            "field": "modality",
+            "reason": "Target validation should not pre-commit to gene therapy.",
+            "resolution_action": "Compare feasible local restoration modalities only after epithelial causal rescue passes.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "candidate_optimization"
+          }
+        ]
+      },
+      "mechanism_claim_ids": [
+        "ti:claim:nod2-myeloid-context"
+      ],
+      "biomarker": {
+        "id": "ti:biomarker:nod2-myeloid-p02",
+        "name": "Myeloid functional NOD2-state classifier",
+        "role": "predictive",
+        "features": [
+          "NOD2 genotype",
+          "myeloid stimulus-response curve",
+          "inflammatory-versus-resolution state"
+        ],
+        "matrix": "genomic DNA and patient-derived intestinal or blood myeloid model",
+        "assay": "Genotype assay plus functional challenge assay",
+        "sampling_timepoint": "Baseline, before treatment assignment",
+        "cutoff_criterion": {
+          "id": "ti:criterion:nod2-myeloid-biomarker-cutoff",
+          "role": "biomarker_cutoff",
+          "endpoint": "Functional NOD2 deficiency classifier positivity cutoff",
+          "method": "Genotype assay plus functional challenge assay",
+          "matrix": "genomic DNA and patient-derived cellular model",
+          "timepoint": "baseline",
+          "expected_direction": "enrich perturbational or treatment response",
+          "threshold_status": "requires_pilot_data",
+          "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+          "failure_condition": "The locked cutoff does not predict differential response in a held-out cohort.",
+          "inconclusive_condition": "Assay QC, prevalence, or held-out sample size is inadequate.",
+          "decision_role": "primary",
+          "required_for_current_gate": true,
+          "threshold_derivation": "Use blinded pilot variance, assay precision, and a prespecified minimum biologically relevant effect; lock before held-out evaluation."
+        },
+        "decision_window_accessibility": "Conceptually available before treatment, but logistics and turnaround time require validation",
+        "analytical_validation": "concept_only",
+        "clinical_validation": "concept_only",
+        "unknowns": [
+          {
+            "field": "cutoff",
+            "reason": "No validated cutoff or locked feature set exists.",
+            "resolution_action": "Lock the assay and cutoff in training data, then test once in an independent cohort.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "target_validation"
+          }
+        ]
+      },
+      "supporting_claim_ids": [
+        "ti:claim:nod2-myeloid-context"
+      ],
+      "counterevidence_claim_ids": [
+        "ti:claim:nod2-tractability"
+      ],
+      "fatal_assumption": "A reproducible beneficial direction of myeloid NOD2 modulation exists across disease-relevant contexts before a rescue modality is selected.",
+      "falsifiable_predictions": [
+        {
+          "id": "ti:prediction:nod2-myeloid-direction",
+          "statement": "The same direction of myeloid NOD2 perturbation improves a locked inflammatory-resolution phenotype across prespecified disease-relevant contexts without compromising host response.",
+          "refutation_condition": "The beneficial direction reverses across contexts, fails replication, or crosses inflammatory/host-response fatal boundaries.",
+          "decision_criterion": {
+            "id": "ti:criterion:nod2-myeloid-prediction",
+            "role": "efficacy",
+            "endpoint": "Primary falsification endpoint for NOD2 hypothesis",
+            "method": "Assay specified in the linked experiment action",
+            "matrix": "Relevant experimental model",
+            "timepoint": "Prespecified primary endpoint timepoint",
+            "expected_direction": "change in the hypothesized beneficial direction",
+            "threshold_status": "requires_pilot_data",
+            "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+            "failure_condition": "Phenotype is not rescued or rescue produces a prespecified excessive-activation signal.",
+            "inconclusive_condition": "Required controls fail, model lacks the baseline phenotype, or assay precision is inadequate.",
+            "decision_role": "primary",
+            "required_for_current_gate": true,
+            "threshold_derivation": "Prespecify context-stratified effects and require directional consistency with confidence bounds; heterogeneous or reversed effects force abstention rather than averaging."
+          }
+        }
+      ],
+      "curation_status": "illustrative_pending_expert_review",
+      "review_notes": [
+        "Deliberate abstention card: high mechanistic and modality uncertainty",
+        "P0.1: quantitative thresholds remain pending expert definition and are never imputed."
+      ],
+      "mechanism_context": {
+        "mechanistic_role": "unknown",
+        "source_cells": [
+          "not applicable; intracellular sensing occurs in target cells"
+        ],
+        "responding_cells": [
+          "intestinal monocytes/macrophages and selected antigen-presenting myeloid cells"
+        ],
+        "effector_cells": [
+          "myeloid inflammatory, microbial-response, and tissue-repair states"
+        ],
+        "anatomical_compartments": [
+          "terminal ileal mucosa",
+          "affected colonic mucosa"
+        ],
+        "bypass_or_compensation": [
+          "cell-type-specific and context-dependent NOD2 effects",
+          "microbial and innate sensing redundancy"
+        ],
+        "unknowns": [
+          {
+            "field": "direction",
+            "reason": "Myeloid NOD2 effects may change with model, region, and inflammatory phase.",
+            "resolution_action": "Run bidirectional, cell-specific perturbation across at least two disease-relevant contexts before choosing restore versus attenuate.",
+            "blocking_for_current_gate": false,
+            "resolution_stage": "target_validation"
+          }
+        ]
+      },
+      "decision_scope": "target_validation",
+      "current_gate": "ready_for_target_validation_experiment",
+      "non_goals": [
+        "Select or optimize a clinical candidate molecule",
+        "Invent numerical thresholds without pilot data",
+        "Predict clinical efficacy or safety from synthetic fixture content"
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "id": "ti:decision:crohns-il23a-p0",
+      "hypothesis_id": "ti:hypothesis:crohns-il23a-inhibit",
+      "as_of_date": "2026-10-31",
+      "verdict": "unassessed",
+      "assessments": {
+        "mechanistic_validity": {
+          "status": "not_scored",
+          "reason": "P0 validates contracts and UX; evidence synthesis starts in P1."
+        },
+        "translation": {
+          "status": "not_scored",
+          "reason": "No curated translational evidence in the fixture."
+        },
+        "safety_tractability": {
+          "status": "not_scored",
+          "reason": "No reviewed product profile or safety evidence in the fixture."
+        }
+      },
+      "novelty_axes": [
+        "population biomarker",
+        "mechanism",
+        "modality"
+      ],
+      "curation_status": "illustrative_pending_expert_review"
+    },
+    {
+      "id": "ti:decision:crohns-jak1-p0",
+      "hypothesis_id": "ti:hypothesis:crohns-jak1-calibrated-inhibit",
+      "as_of_date": "2026-10-31",
+      "verdict": "unassessed",
+      "assessments": {
+        "mechanistic_validity": {
+          "status": "not_scored",
+          "reason": "P0 validates contracts and UX; evidence synthesis starts in P1."
+        },
+        "translation": {
+          "status": "not_scored",
+          "reason": "Tissue exposure and biomarker evidence have not been curated."
+        },
+        "safety_tractability": {
+          "status": "not_scored",
+          "reason": "Therapeutic-window evidence has not been curated."
+        }
+      },
+      "novelty_axes": [
+        "direction and degree",
+        "tissue distribution",
+        "population biomarker"
+      ],
+      "curation_status": "illustrative_pending_expert_review"
+    },
+    {
+      "id": "ti:decision:crohns-tnfsf15-p0",
+      "hypothesis_id": "ti:hypothesis:crohns-tnfsf15-inhibit",
+      "as_of_date": "2026-10-31",
+      "verdict": "unassessed",
+      "assessments": {
+        "mechanistic_validity": {
+          "status": "not_scored",
+          "reason": "Causal evidence has not been curated."
+        },
+        "translation": {
+          "status": "not_scored",
+          "reason": "Predictive biomarker evidence has not been curated."
+        },
+        "safety_tractability": {
+          "status": "not_scored",
+          "reason": "Modality and safety evidence have not been curated."
+        }
+      },
+      "novelty_axes": [
+        "biomarker-defined population",
+        "immune-stromal mechanism"
+      ],
+      "curation_status": "illustrative_pending_expert_review"
+    },
+    {
+      "id": "ti:decision:crohns-nod2-epithelial-p02",
+      "hypothesis_id": "ti:hypothesis:crohns-nod2-epithelial-rescue",
+      "as_of_date": "2026-10-31",
+      "verdict": "abstain",
+      "assessments": {
+        "mechanistic_validity": {
+          "status": "abstained",
+          "reason": "Causal rescue evidence is absent from the P0 fixture."
+        },
+        "translation": {
+          "status": "abstained",
+          "reason": "Genotype-to-functional-phenotype mapping is unresolved."
+        },
+        "safety_tractability": {
+          "status": "abstained",
+          "reason": "Delivery and excess-activation risks are unresolved."
+        }
+      },
+      "novelty_axes": [
+        "restorative direction",
+        "genotype-functional biomarker",
+        "delivery modality"
+      ],
+      "abstention_reason": "Synthetic evidence cannot yet establish epithelial causal rescue or a delivery-independent therapeutic window.",
+      "curation_status": "illustrative_pending_expert_review"
+    },
+    {
+      "id": "ti:decision:crohns-nod2-myeloid-p02",
+      "hypothesis_id": "ti:hypothesis:crohns-nod2-myeloid-direction",
+      "as_of_date": "2026-10-31",
+      "verdict": "abstain",
+      "assessments": {
+        "mechanistic_validity": {
+          "status": "abstained",
+          "reason": "Causal rescue evidence is absent from the P0 fixture."
+        },
+        "translation": {
+          "status": "abstained",
+          "reason": "Genotype-to-functional-phenotype mapping is unresolved."
+        },
+        "safety_tractability": {
+          "status": "abstained",
+          "reason": "Delivery and excess-activation risks are unresolved."
+        }
+      },
+      "novelty_axes": [
+        "restorative direction",
+        "genotype-functional biomarker",
+        "delivery modality"
+      ],
+      "abstention_reason": "The beneficial direction of myeloid NOD2 modulation is unresolved and may be context-dependent.",
+      "curation_status": "illustrative_pending_expert_review"
+    }
+  ],
+  "experiment_actions": [
+    {
+      "id": "ti:experiment:il23a-exvivo-p0",
+      "hypothesis_id": "ti:hypothesis:crohns-il23a-inhibit",
+      "assay_type": "paired ex vivo perturbation",
+      "design": "Compare target perturbation with matched control in biomarker-high and biomarker-low donor tissue using a prespecified response signature.",
+      "expected_information_gain": "Tests causal dependence and whether the proposed biomarker enriches response.",
+      "estimated_cost": "TBD after assay scoping",
+      "go_no_go_rule": "Go only if effect replicates across donors and is larger in the prespecified biomarker-high group.",
+      "curation_status": "illustrative_pending_expert_review",
+      "assumption_tested": "Causal dependence of the biomarker-high state on IL-23 p19 signaling",
+      "model_system": "Patient-derived intestinal biopsy culture with immune-cell preservation",
+      "controls": [
+        {
+          "name": "biomarker-high vehicle/isotype control",
+          "purpose": "Control for biomarker-high vehicle/isotype control"
+        },
+        {
+          "name": "biomarker-low matched perturbation",
+          "purpose": "Control for biomarker-low matched perturbation"
+        },
+        {
+          "name": "orthogonal pathway control",
+          "purpose": "Control for orthogonal pathway control"
+        }
+      ],
+      "sample_plan": {
+        "experimental_unit": "Independent biological donor or independently derived isogenic model",
+        "inclusion_criteria": [
+          "Baseline phenotype and assay QC pass",
+          "Target/biomarker status is determined before perturbation"
+        ],
+        "exclusion_criteria": [
+          "Failed assay QC",
+          "Missing matched control",
+          "Protocol deviation affecting primary endpoint"
+        ],
+        "status": "requires_pilot_data",
+        "rationale": "Effect variance and minimum relevant effect are not available in the illustrative fixture; expert and pilot data must drive power analysis."
+      },
+      "timepoints": [
+        "baseline",
+        "early target-engagement timepoint",
+        "prespecified primary PD timepoint"
+      ],
+      "primary_endpoint": {
+        "id": "ti:criterion:il23a-experiment-primary",
+        "role": "efficacy",
+        "endpoint": "Primary experimental endpoint for IL23A",
+        "method": "Locked assay defined during protocol review",
+        "matrix": "Relevant cells, tissue, or supernatant",
+        "timepoint": "Prespecified primary timepoint",
+        "expected_direction": "change in hypothesized beneficial direction",
+        "threshold_status": "requires_pilot_data",
+        "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+        "failure_condition": "Primary endpoint fails the expert-defined effect threshold with required target engagement.",
+        "inconclusive_condition": "Controls, assay QC, or baseline phenotype fail.",
+        "decision_role": "primary",
+        "required_for_current_gate": true,
+        "threshold_derivation": "Use blinded pilot variance, assay precision, and a prespecified minimum biologically relevant effect; lock before held-out evaluation."
+      },
+      "secondary_endpoints": [
+        {
+          "id": "ti:criterion:il23a-experiment-safety",
+          "role": "safety",
+          "endpoint": "Mechanism-specific safety boundary for IL23A",
+          "method": "Orthogonal safety or excessive-activation panel",
+          "matrix": "Relevant cells, supernatant, and available clinical matrix",
+          "timepoint": "Acute and sustained assessment",
+          "expected_direction": "remain within expert-defined boundary",
+          "threshold_status": "requires_pilot_data",
+          "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+          "failure_condition": "Safety boundary is crossed.",
+          "inconclusive_condition": "Positive control or assay dynamic range fails.",
+          "decision_role": "fatal_boundary",
+          "required_for_current_gate": true,
+          "threshold_derivation": "Use blinded pilot variance, assay precision, and a prespecified minimum biologically relevant effect; lock before held-out evaluation."
+        }
+      ],
+      "decision_criteria": [
+        {
+          "id": "ti:criterion:il23a-experiment-go",
+          "role": "efficacy",
+          "endpoint": "Integrated go/no-go decision for IL23A",
+          "method": "Joint interpretation of target engagement, primary PD, biomarker interaction, and safety boundary",
+          "matrix": "All protocol-defined matrices",
+          "timepoint": "After completion of required replicates",
+          "expected_direction": "meet efficacy and engagement criteria without crossing safety boundary",
+          "threshold_status": "requires_pilot_data",
+          "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+          "failure_condition": "Go only if effect replicates across donors and is larger in the prespecified biomarker-high group.",
+          "inconclusive_condition": "Evidence is directionally mixed, underpowered, or fails reproducibility requirements.",
+          "decision_role": "primary",
+          "required_for_current_gate": true,
+          "threshold_derivation": "Use blinded pilot variance, assay precision, and a prespecified minimum biologically relevant effect; lock before held-out evaluation."
+        }
+      ]
+    },
+    {
+      "id": "ti:experiment:jak1-window-p0",
+      "hypothesis_id": "ti:hypothesis:crohns-jak1-calibrated-inhibit",
+      "assay_type": "multi-compartment dose-response",
+      "design": "Measure intestinal efficacy proxies and systemic pathway suppression across a common concentration series.",
+      "expected_information_gain": "Directly probes whether a separable therapeutic window is plausible.",
+      "estimated_cost": "TBD after assay scoping",
+      "go_no_go_rule": "Go only if the predefined efficacy threshold occurs below the systemic suppression threshold with adequate margin.",
+      "curation_status": "illustrative_pending_expert_review",
+      "assumption_tested": "Separation of intestinal efficacy PD from systemic JAK1 pathway suppression",
+      "model_system": "Paired intestinal and peripheral human cellular systems across a shared free-concentration series",
+      "controls": [
+        {
+          "name": "vehicle control",
+          "purpose": "Control for vehicle control"
+        },
+        {
+          "name": "non-selective JAK reference inhibitor",
+          "purpose": "Control for non-selective JAK reference inhibitor"
+        },
+        {
+          "name": "pathway stimulation and assay positive controls",
+          "purpose": "Control for pathway stimulation and assay positive controls"
+        }
+      ],
+      "sample_plan": {
+        "experimental_unit": "Independent biological donor or independently derived isogenic model",
+        "inclusion_criteria": [
+          "Baseline phenotype and assay QC pass",
+          "Target/biomarker status is determined before perturbation"
+        ],
+        "exclusion_criteria": [
+          "Failed assay QC",
+          "Missing matched control",
+          "Protocol deviation affecting primary endpoint"
+        ],
+        "status": "requires_pilot_data",
+        "rationale": "Effect variance and minimum relevant effect are not available in the illustrative fixture; expert and pilot data must drive power analysis."
+      },
+      "timepoints": [
+        "baseline",
+        "early target-engagement timepoint",
+        "prespecified primary PD timepoint"
+      ],
+      "primary_endpoint": {
+        "id": "ti:criterion:jak1-experiment-primary",
+        "role": "efficacy",
+        "endpoint": "Primary experimental endpoint for JAK1",
+        "method": "Locked assay defined during protocol review",
+        "matrix": "Relevant cells, tissue, or supernatant",
+        "timepoint": "Prespecified primary timepoint",
+        "expected_direction": "change in hypothesized beneficial direction",
+        "threshold_status": "requires_pilot_data",
+        "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+        "failure_condition": "Primary endpoint fails the expert-defined effect threshold with required target engagement.",
+        "inconclusive_condition": "Controls, assay QC, or baseline phenotype fail.",
+        "decision_role": "primary",
+        "required_for_current_gate": true,
+        "threshold_derivation": "Use blinded pilot variance, assay precision, and a prespecified minimum biologically relevant effect; lock before held-out evaluation."
+      },
+      "secondary_endpoints": [
+        {
+          "id": "ti:criterion:jak1-experiment-safety",
+          "role": "safety",
+          "endpoint": "Mechanism-specific safety boundary for JAK1",
+          "method": "Orthogonal safety or excessive-activation panel",
+          "matrix": "Relevant cells, supernatant, and available clinical matrix",
+          "timepoint": "Acute and sustained assessment",
+          "expected_direction": "remain within expert-defined boundary",
+          "threshold_status": "requires_pilot_data",
+          "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+          "failure_condition": "Safety boundary is crossed.",
+          "inconclusive_condition": "Positive control or assay dynamic range fails.",
+          "decision_role": "fatal_boundary",
+          "required_for_current_gate": true,
+          "threshold_derivation": "Use blinded pilot variance, assay precision, and a prespecified minimum biologically relevant effect; lock before held-out evaluation."
+        }
+      ],
+      "decision_criteria": [
+        {
+          "id": "ti:criterion:jak1-experiment-go",
+          "role": "efficacy",
+          "endpoint": "Integrated go/no-go decision for JAK1",
+          "method": "Joint interpretation of target engagement, primary PD, biomarker interaction, and safety boundary",
+          "matrix": "All protocol-defined matrices",
+          "timepoint": "After completion of required replicates",
+          "expected_direction": "meet efficacy and engagement criteria without crossing safety boundary",
+          "threshold_status": "requires_pilot_data",
+          "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+          "failure_condition": "Go only if the predefined efficacy threshold occurs below the systemic suppression threshold with adequate margin.",
+          "inconclusive_condition": "Evidence is directionally mixed, underpowered, or fails reproducibility requirements.",
+          "decision_role": "primary",
+          "required_for_current_gate": true,
+          "threshold_derivation": "Use blinded pilot variance, assay precision, and a prespecified minimum biologically relevant effect; lock before held-out evaluation."
+        }
+      ]
+    },
+    {
+      "id": "ti:experiment:tnfsf15-biomarker-p0",
+      "hypothesis_id": "ti:hypothesis:crohns-tnfsf15-inhibit",
+      "assay_type": "retrospective biomarker-by-perturbation study",
+      "design": "Test whether baseline TNFSF15-associated features predict a replicated perturbational response in independent donor cohorts.",
+      "expected_information_gain": "Distinguishes predictive biomarker value from correlation alone.",
+      "estimated_cost": "TBD after cohort audit",
+      "go_no_go_rule": "Go only if the locked biomarker predicts response in a held-out donor set.",
+      "curation_status": "illustrative_pending_expert_review",
+      "assumption_tested": "Predictive rather than prognostic value of the TL1A/DR3 biomarker",
+      "model_system": "Independent donor cohorts with ex vivo TL1A blockade and locked baseline classifier",
+      "controls": [
+        {
+          "name": "isotype control",
+          "purpose": "Control for isotype control"
+        },
+        {
+          "name": "biomarker-low donors",
+          "purpose": "Control for biomarker-low donors"
+        },
+        {
+          "name": "held-out validation cohort",
+          "purpose": "Control for held-out validation cohort"
+        }
+      ],
+      "sample_plan": {
+        "experimental_unit": "Independent biological donor or independently derived isogenic model",
+        "inclusion_criteria": [
+          "Baseline phenotype and assay QC pass",
+          "Target/biomarker status is determined before perturbation"
+        ],
+        "exclusion_criteria": [
+          "Failed assay QC",
+          "Missing matched control",
+          "Protocol deviation affecting primary endpoint"
+        ],
+        "status": "requires_pilot_data",
+        "rationale": "Effect variance and minimum relevant effect are not available in the illustrative fixture; expert and pilot data must drive power analysis."
+      },
+      "timepoints": [
+        "baseline",
+        "early target-engagement timepoint",
+        "prespecified primary PD timepoint"
+      ],
+      "primary_endpoint": {
+        "id": "ti:criterion:tnfsf15-experiment-primary",
+        "role": "efficacy",
+        "endpoint": "Primary experimental endpoint for TNFSF15",
+        "method": "Locked assay defined during protocol review",
+        "matrix": "Relevant cells, tissue, or supernatant",
+        "timepoint": "Prespecified primary timepoint",
+        "expected_direction": "change in hypothesized beneficial direction",
+        "threshold_status": "requires_pilot_data",
+        "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+        "failure_condition": "Primary endpoint fails the expert-defined effect threshold with required target engagement.",
+        "inconclusive_condition": "Controls, assay QC, or baseline phenotype fail.",
+        "decision_role": "primary",
+        "required_for_current_gate": true,
+        "threshold_derivation": "Use blinded pilot variance, assay precision, and a prespecified minimum biologically relevant effect; lock before held-out evaluation."
+      },
+      "secondary_endpoints": [
+        {
+          "id": "ti:criterion:tnfsf15-experiment-safety",
+          "role": "safety",
+          "endpoint": "Mechanism-specific safety boundary for TNFSF15",
+          "method": "Orthogonal safety or excessive-activation panel",
+          "matrix": "Relevant cells, supernatant, and available clinical matrix",
+          "timepoint": "Acute and sustained assessment",
+          "expected_direction": "remain within expert-defined boundary",
+          "threshold_status": "requires_pilot_data",
+          "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+          "failure_condition": "Safety boundary is crossed.",
+          "inconclusive_condition": "Positive control or assay dynamic range fails.",
+          "decision_role": "fatal_boundary",
+          "required_for_current_gate": true,
+          "threshold_derivation": "Use blinded pilot variance, assay precision, and a prespecified minimum biologically relevant effect; lock before held-out evaluation."
+        }
+      ],
+      "decision_criteria": [
+        {
+          "id": "ti:criterion:tnfsf15-experiment-go",
+          "role": "efficacy",
+          "endpoint": "Integrated go/no-go decision for TNFSF15",
+          "method": "Joint interpretation of target engagement, primary PD, biomarker interaction, and safety boundary",
+          "matrix": "All protocol-defined matrices",
+          "timepoint": "After completion of required replicates",
+          "expected_direction": "meet efficacy and engagement criteria without crossing safety boundary",
+          "threshold_status": "requires_pilot_data",
+          "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+          "failure_condition": "Go only if the locked biomarker predicts response in a held-out donor set.",
+          "inconclusive_condition": "Evidence is directionally mixed, underpowered, or fails reproducibility requirements.",
+          "decision_role": "primary",
+          "required_for_current_gate": true,
+          "threshold_derivation": "Use blinded pilot variance, assay precision, and a prespecified minimum biologically relevant effect; lock before held-out evaluation."
+        }
+      ]
+    },
+    {
+      "id": "ti:experiment:nod2-epithelial-rescue-p02",
+      "hypothesis_id": "ti:hypothesis:crohns-nod2-epithelial-rescue",
+      "assay_type": "isogenic functional rescue",
+      "design": "Map matched stimulus-response curves, barrier/repair phenotype, and fatal inflammatory/viability boundaries before any delivery modality is selected.",
+      "expected_information_gain": "Tests causal sufficiency, appropriate direction, and an initial safety boundary in one design.",
+      "estimated_cost": "TBD; likely highest-cost P0 proposal",
+      "go_no_go_rule": "Proceed only if rescue enters the locked WT functional/barrier band without crossing inflammatory, barrier-damage, or viability ceilings; otherwise abstain or reject.",
+      "curation_status": "illustrative_pending_expert_review",
+      "assumption_tested": "Epithelial-specific NOD2 restoration is causally sufficient to rescue barrier/repair biology without inflammatory overshoot.",
+      "model_system": "Isogenic patient-relevant intestinal epithelial organoids with loss, WT reference, and controlled rescue states",
+      "controls": [
+        {
+          "name": "uncorrected genotype control",
+          "purpose": "Control for uncorrected genotype control"
+        },
+        {
+          "name": "matched physiological reference",
+          "purpose": "Control for matched physiological reference"
+        },
+        {
+          "name": "excessive-activation positive control",
+          "purpose": "Control for excessive-activation positive control"
+        },
+        {
+          "name": "delivery-only control",
+          "purpose": "Control for delivery-only control"
+        }
+      ],
+      "sample_plan": {
+        "experimental_unit": "Independent biological donor or independently derived isogenic model",
+        "inclusion_criteria": [
+          "Baseline phenotype and assay QC pass",
+          "Target/biomarker status is determined before perturbation"
+        ],
+        "exclusion_criteria": [
+          "Failed assay QC",
+          "Missing matched control",
+          "Protocol deviation affecting primary endpoint"
+        ],
+        "status": "requires_pilot_data",
+        "rationale": "Effect variance and minimum relevant effect are not available in the illustrative fixture; expert and pilot data must drive power analysis."
+      },
+      "timepoints": [
+        "baseline",
+        "early target-engagement timepoint",
+        "prespecified primary PD timepoint"
+      ],
+      "primary_endpoint": {
+        "id": "ti:criterion:nod2-epithelial-experiment-primary",
+        "role": "efficacy",
+        "endpoint": "Normalized epithelial functional and barrier restoration",
+        "method": "Locked assay defined during protocol review",
+        "matrix": "Relevant cells, tissue, or supernatant",
+        "timepoint": "Prespecified primary timepoint",
+        "expected_direction": "change in hypothesized beneficial direction",
+        "threshold_status": "requires_pilot_data",
+        "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+        "failure_condition": "Primary endpoint fails the expert-defined effect threshold with required target engagement.",
+        "inconclusive_condition": "Controls, assay QC, or baseline phenotype fail.",
+        "decision_role": "primary",
+        "required_for_current_gate": true,
+        "threshold_derivation": "Use isogenic WT/loss distributions and normalized restoration; lock the multivariate pass band before held-out rescue replicates."
+      },
+      "secondary_endpoints": [
+        {
+          "id": "ti:criterion:nod2-epithelial-experiment-safety",
+          "role": "safety",
+          "endpoint": "Mechanism-specific safety boundary for NOD2",
+          "method": "Orthogonal safety or excessive-activation panel",
+          "matrix": "Relevant cells, supernatant, and available clinical matrix",
+          "timepoint": "Acute and sustained assessment",
+          "expected_direction": "remain within expert-defined boundary",
+          "threshold_status": "requires_pilot_data",
+          "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+          "failure_condition": "Safety boundary is crossed.",
+          "inconclusive_condition": "Positive control or assay dynamic range fails.",
+          "decision_role": "fatal_boundary",
+          "required_for_current_gate": true,
+          "threshold_derivation": "Use blinded pilot variance, assay precision, and a prespecified minimum biologically relevant effect; lock before held-out evaluation."
+        }
+      ],
+      "decision_criteria": [
+        {
+          "id": "ti:criterion:nod2-epithelial-experiment-go",
+          "role": "efficacy",
+          "endpoint": "Integrated go/no-go decision for NOD2",
+          "method": "Joint interpretation of target engagement, primary PD, biomarker interaction, and safety boundary",
+          "matrix": "All protocol-defined matrices",
+          "timepoint": "After completion of required replicates",
+          "expected_direction": "meet efficacy and engagement criteria without crossing safety boundary",
+          "threshold_status": "requires_pilot_data",
+          "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+          "failure_condition": "Revise or stop unless rescue normalizes the prespecified phenotype without crossing the excess-activation threshold.",
+          "inconclusive_condition": "Evidence is directionally mixed, underpowered, or fails reproducibility requirements.",
+          "decision_role": "primary",
+          "required_for_current_gate": true,
+          "threshold_derivation": "Use blinded pilot variance, assay precision, and a prespecified minimum biologically relevant effect; lock before held-out evaluation."
+        }
+      ]
+    },
+    {
+      "id": "ti:experiment:nod2-myeloid-direction-p02",
+      "hypothesis_id": "ti:hypothesis:crohns-nod2-myeloid-direction",
+      "assay_type": "isogenic functional rescue",
+      "design": "Compare loss, WT, graded restoration, and increased-activity states with inflammatory, resolution, microbial-response, and tissue-repair readouts.",
+      "expected_information_gain": "Tests causal sufficiency, appropriate direction, and an initial safety boundary in one design.",
+      "estimated_cost": "TBD; likely highest-cost P0 proposal",
+      "go_no_go_rule": "Select a direction only if benefit is directionally consistent and replicated without inflammatory overshoot or host-response impairment; context reversal mandates abstention.",
+      "curation_status": "illustrative_pending_expert_review",
+      "assumption_tested": "A reproducible beneficial direction of myeloid NOD2 modulation exists across relevant inflammatory and resolution contexts.",
+      "model_system": "Isogenic intestinal or blood-derived myeloid models evaluated under at least two prespecified disease-relevant contexts",
+      "controls": [
+        {
+          "name": "uncorrected genotype control",
+          "purpose": "Control for uncorrected genotype control"
+        },
+        {
+          "name": "matched physiological reference",
+          "purpose": "Control for matched physiological reference"
+        },
+        {
+          "name": "excessive-activation positive control",
+          "purpose": "Control for excessive-activation positive control"
+        },
+        {
+          "name": "delivery-only control",
+          "purpose": "Control for delivery-only control"
+        }
+      ],
+      "sample_plan": {
+        "experimental_unit": "Independent biological donor or independently derived isogenic model",
+        "inclusion_criteria": [
+          "Baseline phenotype and assay QC pass",
+          "Target/biomarker status is determined before perturbation"
+        ],
+        "exclusion_criteria": [
+          "Failed assay QC",
+          "Missing matched control",
+          "Protocol deviation affecting primary endpoint"
+        ],
+        "status": "requires_pilot_data",
+        "rationale": "Effect variance and minimum relevant effect are not available in the illustrative fixture; expert and pilot data must drive power analysis."
+      },
+      "timepoints": [
+        "baseline",
+        "early target-engagement timepoint",
+        "prespecified primary PD timepoint"
+      ],
+      "primary_endpoint": {
+        "id": "ti:criterion:nod2-myeloid-experiment-primary",
+        "role": "efficacy",
+        "endpoint": "Context-stratified direction and magnitude of myeloid inflammatory-resolution response",
+        "method": "Locked assay defined during protocol review",
+        "matrix": "Relevant cells, tissue, or supernatant",
+        "timepoint": "Prespecified primary timepoint",
+        "expected_direction": "change in hypothesized beneficial direction",
+        "threshold_status": "requires_pilot_data",
+        "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+        "failure_condition": "Primary endpoint fails the expert-defined effect threshold with required target engagement.",
+        "inconclusive_condition": "Controls, assay QC, or baseline phenotype fail.",
+        "decision_role": "primary",
+        "required_for_current_gate": true,
+        "threshold_derivation": "Lock context-specific WT bands and require directional consistency with confidence bounds across independent models; do not average opposing effects."
+      },
+      "secondary_endpoints": [
+        {
+          "id": "ti:criterion:nod2-myeloid-experiment-safety",
+          "role": "safety",
+          "endpoint": "Mechanism-specific safety boundary for NOD2",
+          "method": "Orthogonal safety or excessive-activation panel",
+          "matrix": "Relevant cells, supernatant, and available clinical matrix",
+          "timepoint": "Acute and sustained assessment",
+          "expected_direction": "remain within expert-defined boundary",
+          "threshold_status": "requires_pilot_data",
+          "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+          "failure_condition": "Safety boundary is crossed.",
+          "inconclusive_condition": "Positive control or assay dynamic range fails.",
+          "decision_role": "fatal_boundary",
+          "required_for_current_gate": true,
+          "threshold_derivation": "Use blinded pilot variance, assay precision, and a prespecified minimum biologically relevant effect; lock before held-out evaluation."
+        }
+      ],
+      "decision_criteria": [
+        {
+          "id": "ti:criterion:nod2-myeloid-experiment-go",
+          "role": "efficacy",
+          "endpoint": "Integrated go/no-go decision for NOD2",
+          "method": "Joint interpretation of target engagement, primary PD, biomarker interaction, and safety boundary",
+          "matrix": "All protocol-defined matrices",
+          "timepoint": "After completion of required replicates",
+          "expected_direction": "meet efficacy and engagement criteria without crossing safety boundary",
+          "threshold_status": "requires_pilot_data",
+          "rationale": "P0.1 defines the measurement contract but does not invent a scientific threshold.",
+          "failure_condition": "Revise or stop unless rescue normalizes the prespecified phenotype without crossing the excess-activation threshold.",
+          "inconclusive_condition": "Evidence is directionally mixed, underpowered, or fails reproducibility requirements.",
+          "decision_role": "primary",
+          "required_for_current_gate": true,
+          "threshold_derivation": "Use blinded pilot variance, assay precision, and a prespecified minimum biologically relevant effect; lock before held-out evaluation."
+        }
+      ]
+    }
+  ],
+  "review_records": [
+    {
+      "id": "ti:review:expert1-round1",
+      "reviewer_label": "expert1 (provenance pending confirmation)",
+      "review_round": 1,
+      "reviewed_on": "2026-11-01",
+      "scope": "P0 card expressiveness and readiness for formal target validation",
+      "outcome": "changes_requested",
+      "source_path": "docs/experts_review/expert1.md",
+      "findings": [
+        "Add structured disease, anatomical, cellular, and treatment context.",
+        "Distinguish molecular target form, selectivity, tissue distribution, and target engagement.",
+        "Make biomarker role, assay, cutoff, and validation status explicit.",
+        "Expose measurable endpoints, refutation rules, controls, and inconclusive outcomes.",
+        "Show existing falsification and experiment content in the review interface."
+      ],
+      "resolution_status": "Addressed in schema 1.1 and P0.1 fixture; awaiting round-2 review."
+    },
+    {
+      "id": "ti:review:round2-il23a",
+      "reviewer_label": "round2-il23a reviewer (provenance pending confirmation)",
+      "review_round": 2,
+      "reviewed_on": "2026-11-01",
+      "scope": "P0.1 IL23A card readiness",
+      "outcome": "changes_requested",
+      "source_path": "docs/experts_review/round2/IL23A.md",
+      "findings": [
+        "IL23A cell-axis definitions and intact-ligand TE/PD hierarchy require refinement."
+      ],
+      "resolution_status": "Addressed in converged P0.2 fixture; no additional schema-review loop is required under the frozen change-control rule."
+    },
+    {
+      "id": "ti:review:round2-jak1",
+      "reviewer_label": "round2-jak1 reviewer (provenance pending confirmation)",
+      "review_round": 2,
+      "reviewed_on": "2026-11-01",
+      "scope": "P0.1 JAK1 card readiness",
+      "outcome": "changes_requested",
+      "source_path": "docs/experts_review/round2/JAK1.md",
+      "findings": [
+        "JAK selectivity, matched tissue/peripheral PD, margin derivation, and stage-specific safety boundaries require refinement."
+      ],
+      "resolution_status": "Addressed in converged P0.2 fixture; no additional schema-review loop is required under the frozen change-control rule."
+    },
+    {
+      "id": "ti:review:round2-tnfsf15",
+      "reviewer_label": "round2-tnfsf15 reviewer (provenance pending confirmation)",
+      "review_round": 2,
+      "reviewed_on": "2026-11-01",
+      "scope": "P0.1 TNFSF15 card readiness",
+      "outcome": "changes_requested",
+      "source_path": "docs/experts_review/round2/TNFSF15.md",
+      "findings": [
+        "Predictive interaction, conditional DcR3 modeling, and form-specific engagement require refinement."
+      ],
+      "resolution_status": "Addressed in converged P0.2 fixture; no additional schema-review loop is required under the frozen change-control rule."
+    },
+    {
+      "id": "ti:review:round2-nod2",
+      "reviewer_label": "round2-nod2 reviewer (provenance pending confirmation)",
+      "review_round": 2,
+      "reviewed_on": "2026-11-01",
+      "scope": "P0.1 NOD2 card readiness",
+      "outcome": "changes_requested",
+      "source_path": "docs/experts_review/round2/NOD2.md",
+      "findings": [
+        "Epithelial and myeloid hypotheses must be separated; modality must remain uncommitted until direction and target cell are established."
+      ],
+      "resolution_status": "Addressed in converged P0.2 fixture; no additional schema-review loop is required under the frozen change-control rule."
+    }
+  ],
+  "scope_policy": {
+    "status": "frozen",
+    "decision_scope": "target_validation",
+    "current_gate": "ready_for_target_validation_experiment",
+    "in_scope": [
+      "Disease, population, anatomical, cellular, and treatment context needed to state a falsifiable target hypothesis",
+      "Molecular target form, intervention direction, biomarker role, counterevidence, fatal assumption, and abstention",
+      "A protocol-ready validation experiment skeleton with controls, endpoints, failure, and inconclusive rules",
+      "A prespecified derivation plan for thresholds that require pilot data"
+    ],
+    "explicitly_deferred": [
+      "Molecule-specific dose, route, formulation, PK, and numerical therapeutic margin before a candidate exists",
+      "Clinical stopping thresholds, event rates, and benefit-risk decisions before clinical development",
+      "Production assay SOPs, final sample-size calculations, and site-operational details",
+      "Automatic evidence synthesis and scientific scoring, which begin in P1"
+    ],
+    "acceptance_rule": "The frozen contract passes when every current-gate decision is expressible, every required criterion has a specified value or auditable pilot-data derivation plan, and no unknown is silently imputed.",
+    "change_control_rule": "After P0.2, a breaking schema change requires evidence that a required target-validation decision cannot be represented or that the current representation creates a material scientific or safety error. Preferences and candidate-specific details enter the backlog without reopening P0."
+  }
+}

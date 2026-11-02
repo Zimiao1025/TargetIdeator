@@ -1,0 +1,75 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "targetideator"
+version = "0.32.0"
+description = "Auditable, evidence-grounded and falsification-aware drug target ideation"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [
+  { name = "Zimiao1025", email = "leon_02@aliyun.com" },
+]
+keywords = [
+  "drug-target-discovery",
+  "evidence-graph",
+  "falsification",
+  "provenance",
+  "temporal-validation",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = [
+  "duckdb>=2,<3",
+  "fastapi>=0.115,<1",
+  "pydantic>=2.10,<3",
+  "scikit-learn>=1.5,<2",
+  "typer>=0.15,<1",
+  "uvicorn>=0.34,<1",
+]
+
+[project.optional-dependencies]
+source-capture = [
+  "rdkit>=2025.3,<2027",
+]
+
+[project.scripts]
+targetideator = "targetideator.cli:app"
+
+[project.urls]
+Repository = "https://github.com/Zimiao1025/TargetIdeator"
+Issues = "https://github.com/Zimiao1025/TargetIdeator/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/targetideator"]
+exclude = ["src/targetideator/fixtures/**"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"src/targetideator/fixtures/__init__.py" = "targetideator/fixtures/__init__.py"
+"src/targetideator/fixtures/crohns_seed.json" = "targetideator/fixtures/crohns_seed.json"
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "src/targetideator/**/*.py",
+  "README.md",
+  "DEPLOYMENT.md",
+  "LICENSE",
+  "NOTICE",
+  "CITATION.cff",
+  "DATA_REDISTRIBUTION_LEDGER.md",
+  "pyproject.toml",
+  "uv.lock",
+]
+exclude = ["src/targetideator/fixtures/**"]
+
+[tool.hatch.build.targets.sdist.force-include]
+"src/targetideator/fixtures/__init__.py" = "src/targetideator/fixtures/__init__.py"
+"src/targetideator/fixtures/crohns_seed.json" = "src/targetideator/fixtures/crohns_seed.json"

@@ -1,0 +1,33 @@
+# Local environments and caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Secrets and editor/OS state
+.env
+.env.*
+!.env.example
+.DS_Store
+.idea/
+.vscode/
+
+# Build and development outputs
+build/
+dist/
+outputs/
+*.egg-info/
+
+# Internal development material is intentionally outside the release VCS.
+docs/
+tests/
+
+# External, derived and historical fixtures are local-only. The two exceptions
+# are original package material required for the code-only demo.
+src/targetideator/fixtures/**
+!src/targetideator/fixtures/__init__.py
+!src/targetideator/fixtures/crohns_seed.json

@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use TargetIdeator, please cite this software using these metadata."
+title: "TargetIdeator: evidence-grounded and falsification-aware drug target ideation"
+abstract: >-
+  TargetIdeator is an auditable computational system for assembling versioned
+  evidence, generating drug-target hypotheses, applying fixed falsifiers, and
+  reporting temporal outcome and robustness analyses with explicit provenance
+  and scientific-readiness boundaries.
+authors:
+  - name: "Zimiao1025"
+    email: "leon_02@aliyun.com"
+version: "0.32.0"
+date-released: "2026-11-02"
+type: software
+license: Apache-2.0
+repository-code: "https://github.com/Zimiao1025/TargetIdeator"
+url: "https://github.com/Zimiao1025/TargetIdeator"
+keywords:
+  - drug target discovery
+  - evidence graph
+  - temporal validation
+  - falsification
+  - provenance
